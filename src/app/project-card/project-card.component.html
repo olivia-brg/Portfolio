@@ -3,8 +3,6 @@
     <p>{{ projectCard.context }}</p>
     @if (projectCard.developmentTime) {
         <p>Development time : {{ projectCard.developmentTime | lowercase }}</p>
-    } @else {
-        <p>not relevent</p>
     }
     <img [src]="projectCard.imageURL" [alt]="projectCard.title">
     <p>{{ projectCard.description }}</p>
