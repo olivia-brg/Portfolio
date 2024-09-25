@@ -10,7 +10,12 @@ export class ProjectCard {
         public imageURL: string
     ) {};
 
-    setDevelopmentTime( developmentTime: string): void {
+    setDevelopmentTime(developmentTime: string): void {
         this.developmentTime = developmentTime;
+    }
+
+    withDevelopmentTime(developmentTime: string): ProjectCard {
+        this.setDevelopmentTime(developmentTime);
+        return this;
     }
 }
