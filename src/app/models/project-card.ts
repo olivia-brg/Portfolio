@@ -1,6 +1,7 @@
 export class ProjectCard {
 
     developmentTime?: string;
+    id: string;
 
     constructor (
         public title: string,
@@ -8,7 +9,9 @@ export class ProjectCard {
         public description: string,
         public createdAt: Date,
         public imageURL: string
-    ) {};
+    ) {
+        this.id = crypto.randomUUID().substring(0, 8);        
+    };
 
     setDevelopmentTime(developmentTime: string): void {
         this.developmentTime = developmentTime;

@@ -1,0 +1,10 @@
+<div class="project-card">
+    <h2>{{ projectCard.title | uppercase }}</h2>
+    <p>{{ projectCard.context }}</p>
+    @if (projectCard.developmentTime) {
+        <p>Development time : {{ projectCard.developmentTime | lowercase }}</p>
+    }
+    <img [src]="projectCard.imageURL" [alt]="projectCard.title">
+    <p>{{ projectCard.description }}</p>
+    <p>Created on : {{ projectCard.createdAt | date: 'MMMM yyyy' | lowercase}}</p>
+</div>
