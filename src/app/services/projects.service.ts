@@ -13,7 +13,7 @@ export class ProjectsService {
           `Group project`,
           `Platformer game coded in LUA on the fantasy console PICO-8.`,
           new Date('2024-06'),
-          `assets/images/chatgrin.png`
+          `/assets/images/chatgrin.png`
         ).withDevelopmentTime('Less than 2 weeks'),
         new ProjectCard(
           `Dashboard`,
