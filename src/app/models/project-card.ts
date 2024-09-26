@@ -10,7 +10,8 @@ export class ProjectCard {
         public createdAt: Date,
         public imageURL: string
     ) {
-        this.id = crypto.randomUUID().substring(0, 8);        
+        this.id = crypto.randomUUID().substring(0, 8);
+        
     };
 
     setDevelopmentTime(developmentTime: string): void {

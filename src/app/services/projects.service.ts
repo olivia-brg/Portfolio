@@ -34,4 +34,12 @@ export class ProjectsService {
       getProjectCards(): ProjectCard[] {
         return[...this.projectCards]
       }
+
+      getProjectCardById(projectCardId: string): ProjectCard {
+        const foundProjectCard = this.projectCards.find(ProjectCard => ProjectCard.id === projectCardId);
+        if (!foundProjectCard) {
+          throw new Error('Project not found!');
+        }
+        return foundProjectCard;
+      }
 };

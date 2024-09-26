@@ -1,5 +1,6 @@
 <div class="project-card">
     <h2>{{ projectCard.title | uppercase }}</h2>
+    <a routerLink="/projects">Back</a>
     <p>{{ projectCard.context }}</p>
     @if (projectCard.developmentTime) {
         <p>Development time : {{ projectCard.developmentTime | lowercase }}</p>
