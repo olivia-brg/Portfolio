@@ -1,3 +1,5 @@
-@for (projectCard of projectCards; track projectCard.title) {
-    <app-project-card [projectCard]="projectCard" />
+@for (projectCard of projectCards; track $index) {
+<section class="panel" style="height: 100vh">
+    <app-project-card [projectCard]="projectCard" class="$index" />
+</section>
 }

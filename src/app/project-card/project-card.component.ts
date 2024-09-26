@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   selector: 'app-project-card',
   standalone: true,
   imports: [
-    UpperCasePipe
+    UpperCasePipe,
   ],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss'

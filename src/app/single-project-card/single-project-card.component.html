@@ -7,5 +7,8 @@
     }
     <img [src]="projectCard.imageURL" [alt]="projectCard.title">
     <p>{{ projectCard.description }}</p>
+    @if (projectCard.fullDescription) {
+        <p>{{ projectCard.fullDescription }}</p>
+    }
     <p>Created on : {{ projectCard.createdAt | date: 'MMMM yyyy' | lowercase}}</p>
 </div>

@@ -4,6 +4,13 @@
   margin: 20px auto;
   padding: 10px 30px;
   box-shadow: lightgray 4px 4px 20px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    width: 51%;
+    background-color: antiquewhite;
+  }
 
   img {
     width: 100%;

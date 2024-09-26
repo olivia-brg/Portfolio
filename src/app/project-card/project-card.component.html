@@ -1,5 +1,7 @@
-<div class="project-card">
-    <h2>{{ projectCard.title | uppercase }}</h2>
-    <img [src]="projectCard.imageURL" [alt]="projectCard.title"><br>
-    <button (click)="onViewProject()">VIEW PROJECT</button>
+<div class="stack-container">
+    <div class="project-card" (click)="onViewProject()" >
+        <h2>{{ projectCard.title | uppercase }}</h2>
+        <img [src]="projectCard.imageURL" [alt]="projectCard.title"><br>
+        <p>{{ projectCard.description }}</p>
+    </div>
 </div>

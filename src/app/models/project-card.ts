@@ -1,6 +1,7 @@
 export class ProjectCard {
 
     developmentTime?: string;
+    fullDescription?: string;
     id: string;
 
     constructor (
@@ -20,6 +21,15 @@ export class ProjectCard {
 
     withDevelopmentTime(developmentTime: string): ProjectCard {
         this.setDevelopmentTime(developmentTime);
+        return this;
+    }
+
+    setFullDescription(fullDescription: string): void {
+        this.fullDescription = fullDescription;
+    }
+    
+    withFullDescription(fullDescription: string): ProjectCard {
+        this.setFullDescription(fullDescription);
         return this;
     }
 }
