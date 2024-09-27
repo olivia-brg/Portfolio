@@ -1,5 +1,7 @@
-<div class="stack-container">
-    <div class="project-card" (click)="onViewProject()" >
+<!-- Project page display -->
+
+<div class="stack-container" (click)="onViewProject()">
+    <div class="project-card" >
         <h2>{{ projectCard.title | uppercase }}</h2>
         <img [src]="projectCard.imageURL" [alt]="projectCard.title"><br>
         <p>{{ projectCard.description }}</p>

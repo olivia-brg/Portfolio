@@ -33,6 +33,7 @@ export class ProjectsService {
         ).withDevelopmentTime('Less than 2 weeks')
       ];
 
+      // create shallow copy to not modify original array
       getProjectCards(): ProjectCard[] {
         return[...this.projectCards]
       }

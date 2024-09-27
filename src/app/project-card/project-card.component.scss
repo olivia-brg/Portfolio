@@ -1,27 +1,36 @@
-.project-card {
-  box-sizing: border-box;
-  width: 50%;
-  margin: 20px auto;
-  padding: 10px 30px;
+.stack-container {
+
+  // width: 90vw;
+  height: 90vh;
+  margin: auto;
+  
+  background-color: rgb(255, 182, 182);
   box-shadow: lightgray 4px 4px 20px;
-  transition: all 0.3s ease;
 
   &:hover {
     cursor: pointer;
-    width: 51%;
-    background-color: antiquewhite;
+    // width: 51%;
+    background-color: rgb(179, 255, 128);
   }
+  
+  .project-card {
+    box-sizing: border-box;
+    // width: 50%;
+    margin: 20px auto;
+    padding: 30px 5%;
+    transition: all 0.3s ease;
 
-  img {
-    width: 100%;
-  }
+    img {
+      width: 100%;
+    }
 
-  h2 {
-    margin-bottom: 0;
-  }
+    h2 {
+      margin-bottom: 0;
+    }
 
-  p {
-    font-weight: 300;
-    font-size: 16px;
+    p {
+      font-weight: 300;
+      font-size: 16px;
+    }
   }
 }

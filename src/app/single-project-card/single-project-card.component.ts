@@ -30,6 +30,7 @@ export class SingleProjectCardComponent implements OnInit {
     this.getProject();
   }
   
+  // get the project by the dynamic ID
   private getProject() {
     const projectId = this.route.snapshot.params['id'];
     this.projectCard = this.projectsService.getProjectCardById(projectId);

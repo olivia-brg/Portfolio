@@ -1,5 +1,16 @@
-@for (projectCard of projectCards; track $index) {
-<section class="panel" style="height: 100vh">
-    <app-project-card [projectCard]="projectCard" class="$index" />
-</section>
-}
+<!-- Project page implementation -->
+
+<div class="cards-container">
+    <div class='cards'>
+
+        @for (projectCard of projectCards; track $index) {
+        <section class="single-card"  [ngStyle]="{'top.px': ($index + 1) * 50}">
+            <app-project-card [projectCard]="projectCard" class="$index" />
+        </section>
+        }
+
+    </div>
+</div>
+<div class="bottom">
+    <h1>exemple</h1>
+</div>

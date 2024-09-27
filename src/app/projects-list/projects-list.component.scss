@@ -1,0 +1,13 @@
+.cards-container {
+    display: flex;
+    // justify-content: center;
+
+}
+
+.bottom {
+    height: 2000px;
+    width: 100vw;
+    background-color: green;
+    position: absolute;
+    z-index: 10;
+}
