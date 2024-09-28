@@ -1,0 +1,8 @@
+<div class="homepage-section">
+    <h2>{{ homepageSection.title | uppercase }}</h2>
+    @if (homepageSection.imagePath) {
+        <img [src]="homepageSection.imagePath" [alt]="homepageSection.title"><br>
+    }
+    <p>{{ homepageSection.text }}</p>
+</div>
+

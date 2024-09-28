@@ -2,7 +2,7 @@
 
 <div class="cards-container">
     <div class='cards'>
-        <section class="single-card"> 
+        <!-- <section class="single-card"> 
             <h1>TEST</h1>
         </section>
         <section class="single-card"> 
@@ -25,13 +25,13 @@
         </section>
         <section class="single-card"> 
             <h1>TEST</h1>
-        </section>
+        </section> -->
 
-        <!-- @for (projectCard of projectCards; track $index) {
+        @for (projectCard of projectCards; track $index) {
         <section class="single-card"  [ngStyle]="{'top.px': ($index + 1) * 00}"> 
-            <app-project-card [projectCard]="projectCard" [ngClass]="{$index}" />
+            <app-project-card [projectCard]="projectCard" [id]="'single-card-' + ($index + 1)" />
         </section>
-        } -->
+        }
 
     </div>
 </div>

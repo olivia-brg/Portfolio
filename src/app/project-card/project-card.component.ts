@@ -1,6 +1,6 @@
+import { ProjectCard } from '../models/project-card';
 import { UpperCasePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { ProjectCard } from '../models/project-card';
 import { Router } from '@angular/router';
 
 @Component({

@@ -59,7 +59,7 @@ export class ProjectsListComponent implements OnInit {
         pinSpacing: false,
         markers: false,
         id: 'pin',
-        // end: 'max',
+        end: 'max',
         invalidateOnRefresh: true,
       });
     });

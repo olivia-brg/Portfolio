@@ -2,3 +2,10 @@
 <h1>BERGAGLIA <br> Olivia</h1>
 <p>Hi, I'm a full-stack developer student based in Nantes, France.</p>
 <p>I'm currently looking for an alternance, so don't hesitate to reach me via any contact form !</p>
+
+
+@for (homepageSection of homepageSections; track $index) {
+    <section class="single-section"> 
+        <app-homepage-section [homepageSection]="homepageSection" [id]="'homepage-section-' + ($index + 1)" />
+    </section>
+    }

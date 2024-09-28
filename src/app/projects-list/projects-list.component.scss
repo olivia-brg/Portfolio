@@ -10,8 +10,12 @@
             box-shadow: lightgray 4px 4px 20px;
           
             width: 90vw;
-            height: 200px;
+            height: 80vh;
             margin: auto;
+
+            img {
+                height: 50%;
+            }
         }
     }
 
