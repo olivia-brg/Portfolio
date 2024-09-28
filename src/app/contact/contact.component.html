@@ -3,21 +3,11 @@
     <a routerLink="/home">Get back...</a>
     <p>{{ contact.text }}</p>
 
-    <p>Email : <a href="{{ contact.email }}"><strong>{{ contact.email }}</strong></a></p>
+    <p>Email : <a href="mailto:{{ contact.email }}"><strong>{{ contact.email }}</strong></a></p>
     <p>Phone : <a href="tel:+33{{ contact.phone }}"><strong>0{{ contact.phone }}</strong></a></p>
     <p><a href="https://www.linkedin.com/in/{{ contact.linkedin }}" target="_blank"><strong>LinkedIn</strong></a></p>
     <p><a href="https://github.com/{{ contact.github }}" target="_blank"><strong>GitHub</strong></a></p>
 
-    <form action="https://formspree.io/your-email" method="POST">
-        <label for="name">Name :</label>
-        <input type="text" id="name" name="name" required><br>
+    <app-form />
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="message">Message :</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send</button>
-    </form>`
 </div>

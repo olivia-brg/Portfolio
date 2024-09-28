@@ -1,8 +1,18 @@
-<p id="job-title">FULL-STACK DEVELOPER</p>
-<h1>BERGAGLIA <br> Olivia</h1>
-<p>Hi, I'm a full-stack developer student based in Nantes, France.</p>
-<p>I'm currently looking for an alternance, so don't hesitate to reach me via any contact form !</p>
-
-
-
-<button (click)="onContactClick()">Contact</button>
+<div>
+    <p id="job-title">FULL-STACK DEVELOPER</p>
+    <h1>BERGAGLIA <br> Olivia</h1>
+    <p>Hi, I'm a full-stack developer student based in Nantes, France.</p>
+    <p>I'm currently looking for an alternance, so don't hesitate to reach me via any contact form !</p>
+</div>
+<div>
+    <h1>Last projects</h1>
+    @for (projectCard of projectCards | slice: 0: 3 ; track projectCard ) {
+        <h2>{{projectCard.title}}</h2>
+    }
+    <a [routerLink]="['/projects']">See more projects >></a>
+</div>
+<div>
+    <h1>{{ contact.title }}</h1>
+    <app-form />
+    <button (click)="onContactClick()">See all</button>
+</div>

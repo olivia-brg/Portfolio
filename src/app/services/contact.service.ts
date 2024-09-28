@@ -8,7 +8,7 @@ import { Contact } from "../models/contact";
 export class ContactService {
 
     private contacts: Contact = new Contact(
-        `Contact`,
+        `Contact me`,
         `If you'd like to get in touch, feel free to reach out through any of the following methods (due to too much cold calling, please leave me a message so that I can get back to you)`,
         `olivia.bergalia@gmail.com`,
         `621843088`,

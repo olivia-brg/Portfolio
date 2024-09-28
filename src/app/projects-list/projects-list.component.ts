@@ -28,7 +28,6 @@ export class ProjectsListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.projectCards = this.projectsService.getProjectCards();
   }
 
