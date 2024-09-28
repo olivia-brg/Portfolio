@@ -20,7 +20,6 @@ import { ProjectPreviewComponent } from "../project-preview/project-preview.comp
     SlicePipe,
     RouterLink,
     ProjectPreviewComponent,
-    ProjectPreviewComponent
 ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
