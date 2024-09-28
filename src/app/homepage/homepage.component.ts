@@ -8,6 +8,7 @@ import { ProjectCard } from '../models/project-card';
 import { ProjectCardComponent } from '../project-card/project-card.component';
 import { ContactService } from '../services/contact.service';
 import { ProjectsService } from '../services/projects.service';
+import { ProjectPreviewComponent } from "../project-preview/project-preview.component";
 
 @Component({
   selector: 'app-homepage',
@@ -17,7 +18,9 @@ import { ProjectsService } from '../services/projects.service';
     ContactComponent,
     FormComponent,
     SlicePipe,
-    RouterLink
+    RouterLink,
+    ProjectPreviewComponent,
+    ProjectPreviewComponent
 ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'

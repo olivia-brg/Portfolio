@@ -9,6 +9,14 @@ export class ProjectsService {
 
   private projectCards: ProjectCard[] = [
     new ProjectCard(
+      `O discount`,
+      `Group project`,
+      `A platform to sell your soul.`,
+      new Date('2024-09'),
+      `https://les10meilleurs.net/wp-content/uploads/2022/01/Miliboo-meubles-1024x404.jpg`
+    ).withDevelopmentTime('Less than 4 weeks'),
+
+    new ProjectCard(
       `Don't Trigger Me`,
       `Group project`,
       `A Chrome extension that provides customizable trigger warnings by automatically censoring specific words or phrases on web pages you visit. Users can choose from pre-defined categories or manually add words they'd prefer to avoid, creating a safer and more comfortable browsing experience tailored to their needs.`,

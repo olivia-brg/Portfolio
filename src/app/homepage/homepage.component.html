@@ -6,8 +6,10 @@
 </div>
 <div>
     <h1>Last projects</h1>
-    @for (projectCard of projectCards | slice: 0: 3 ; track projectCard ) {
-        <h2>{{projectCard.title}}</h2>
+    @for (projectCard of projectCards | slice: 0: 3 ; track $index ) {
+        <app-project-preview [projectPreview]="projectCard"/>
+    <div>
+    </div>
     }
     <a [routerLink]="['/projects']">See more projects >></a>
 </div>

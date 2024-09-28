@@ -1,0 +1,5 @@
+<div class="card">
+        <h2 (click)="onViewProject()">{{ projectPreview.title | uppercase }}</h2>
+        <img [src]="projectPreview.imagePath" [alt]="projectPreview.title"><br>
+        <p>{{ projectPreview.createdAt | date: 'MMMM yyyy'}}</p>
+</div>
