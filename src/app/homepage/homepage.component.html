@@ -5,7 +5,9 @@
 
 
 @for (homepageSection of homepageSections; track $index) {
-    <section class="single-section"> 
-        <app-homepage-section [homepageSection]="homepageSection" [id]="'homepage-section-' + ($index + 1)" />
-    </section>
-    }
+<section class="single-section">
+    <app-homepage-section [homepageSection]="homepageSection" [id]="'homepage-section-' + ($index + 1)" />
+</section>
+}
+
+<button (click)="onContactClick()">Contact</button>

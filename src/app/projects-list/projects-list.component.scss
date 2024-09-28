@@ -11,14 +11,16 @@
           
             width: 90vw;
             height: 80vh;
-            margin: auto;
 
-            img {
-                height: 50%;
-            }
+            &:hover {
+                cursor: pointer;
+                // width: 51%;
+                background-color: rgb(179, 255, 128);
+              }
+            
         }
     }
-
+    
 }
 
 .bottom {
