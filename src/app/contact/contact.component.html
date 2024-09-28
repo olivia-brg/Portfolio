@@ -1,13 +1,11 @@
-<h1>Contact</h1>
+<h1>{{ contact.title }}</h1>
 <a routerLink="/home" >Get back...</a>
-<p>If you'd like to get in touch, feel free to reach out through any of the following methods (due to too much cold
-    calling, please leave me a message so that I can get back to you) :</p>
+<p>{{ contact.text }}</p>
 
-<p>Email : <a href="mailto:olivia.bergalia@gmail.com"><strong>olivia.bergaglia&#64;gmail.com</strong></a></p>
-<p>Phone : <a href="tel:+33621843088"><strong>06 21 84 30 88</strong></a></p>
-<p>LinkedIn : <a href="https://www.linkedin.com/in/olivia-bergaglia-438684302/"
-        target="_blank"><strong>linkedin.com/in/oliviabergaglia</strong></a></p>
-<p>GitHub : <a href="https://github.com/olivia-brg" target="_blank"><strong>github.com/olivia-brg</strong></a></p>
+<p>Email : <a href="{{ contact.email }}"><strong>{{ contact.email }}</strong></a></p>
+<p>Phone : <a href="tel:+33{{ contact.phone }}"><strong>0{{ contact.phone }}</strong></a></p>
+<p><a href="https://www.linkedin.com/in/{{ contact.linkedin }}" target="_blank"><strong>LinkedIn</strong></a></p>
+<p><a href="https://github.com/{{ contact.github }}" target="_blank"><strong>GitHub</strong></a></p>
 
 <form action="https://formspree.io/your-email" method="POST">
     <label for="name">Name :</label>
