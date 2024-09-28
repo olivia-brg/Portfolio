@@ -6,9 +6,9 @@ import { FormComponent } from "../form/form.component";
 import { Contact } from '../models/contact';
 import { ProjectCard } from '../models/project-card';
 import { ProjectCardComponent } from '../project-card/project-card.component';
+import { ProjectPreviewComponent } from "../project-preview/project-preview.component";
 import { ContactService } from '../services/contact.service';
 import { ProjectsService } from '../services/projects.service';
-import { ProjectPreviewComponent } from "../project-preview/project-preview.component";
 
 @Component({
   selector: 'app-homepage',
