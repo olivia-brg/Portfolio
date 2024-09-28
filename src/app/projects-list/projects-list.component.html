@@ -2,12 +2,36 @@
 
 <div class="cards-container">
     <div class='cards'>
-
-        @for (projectCard of projectCards; track $index) {
-        <section class="single-card"  [ngStyle]="{'top.px': ($index + 1) * 50}">
-            <app-project-card [projectCard]="projectCard" class="$index" />
+        <section class="single-card"> 
+            <h1>TEST</h1>
         </section>
-        }
+        <section class="single-card"> 
+            <h1>TEST</h1>
+        </section>
+        <section class="single-card"> 
+            <h1>TEST</h1>
+        </section>
+        <section class="single-card"> 
+            <h1>TEST</h1>
+        </section>
+        <section class="single-card"> 
+            <h1>TEST</h1>
+        </section>
+        <section class="single-card"> 
+            <h1>TEST</h1>
+        </section>
+        <section class="single-card"> 
+            <h1>TEST</h1>
+        </section>
+        <section class="single-card"> 
+            <h1>TEST</h1>
+        </section>
+
+        <!-- @for (projectCard of projectCards; track $index) {
+        <section class="single-card"  [ngStyle]="{'top.px': ($index + 1) * 00}"> 
+            <app-project-card [projectCard]="projectCard" [ngClass]="{$index}" />
+        </section>
+        } -->
 
     </div>
 </div>

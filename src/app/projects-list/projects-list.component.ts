@@ -35,31 +35,32 @@ export class ProjectsListComponent implements OnInit {
   // Stacking cards code
 
   ngAfterViewInit(): void {
-    const cards = gsap.utils.toArray(".single-card") as HTMLElement[]; // Sélectionne tous les éléments .card
+    const cards = gsap.utils.toArray(".single-card") as HTMLElement[]; // select all .single-card elements
 
     cards.forEach((card, index) => {
       const tween = gsap.to(card, {
         scrollTrigger: {
           trigger: card,
-          start: () => `top bottom-=100`,
-          end: () => `top top+=40`,
+          start: () => `top top+=300`,
+          end: () => `top top+=50`,
           scrub: true,
-          markers: true, // Active les marqueurs de ScrollTrigger pour déboguer
-          invalidateOnRefresh: true // Recalcule les positions lorsque la fenêtre est redimensionnée
+          markers: true,
+          invalidateOnRefresh: true
         },
-        ease: "none", // Pas d'effet d'accélération
-        scale: () => 1 - (cards.length - index) * 0.025 // Diminue l'échelle en fonction de l'index
+        ease: "power1.out",
+        // scale: () => 1 - (cards.length - index) * 0.025
       });
 
       ScrollTrigger.create({
         trigger: card,
-        start: "top top",
-        pin: true, // Épingle l'élément lorsque le haut du card atteint le haut de la page
-        pinSpacing: false, // Pas d'espace réservé lorsque l'élément est épinglé
-        markers: false, // Pour déboguer avec des marqueurs visuels
-        id: 'pin', // Identifiant pour cette animation ScrollTrigger
-        end: 'max', // L'épingle dure jusqu'à ce que l'utilisateur ait scrollé jusqu'à la fin du contenu
-        invalidateOnRefresh: true, // Réinitialise les valeurs lorsque la page est redimensionnée
+        start: "top top+=50",
+        pin: true,
+        anticipatePin: 1,
+        pinSpacing: false,
+        markers: false,
+        id: 'pin',
+        // end: 'max',
+        invalidateOnRefresh: true,
       });
     });
 

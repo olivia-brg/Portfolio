@@ -7,7 +7,7 @@
     @if (projectCard.developmentTime) {
         <p>Development time : {{ projectCard.developmentTime | lowercase }}</p>
     }
-    <img [src]="projectCard.imageURL" [alt]="projectCard.title">
+    <img [src]="projectCard.imagePath" [alt]="projectCard.title">
     <p>{{ projectCard.description }}</p>
     @if (projectCard.fullDescription) {
         <p>{{ projectCard.fullDescription }}</p>

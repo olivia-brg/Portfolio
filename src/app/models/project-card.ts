@@ -9,7 +9,7 @@ export class ProjectCard {
         public context: string,
         public description: string,
         public createdAt: Date,
-        public imageURL: string
+        public imagePath: string
     ) {
         this.id = crypto.randomUUID().substring(0, 8);
         
