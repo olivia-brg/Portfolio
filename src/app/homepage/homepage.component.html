@@ -5,6 +5,9 @@
     <p>Je suis actuellement à la recherche d'une alternance, alors n'hésitez pas à me joindre via mes contacts... ;)</p>
 </div>
 <div>
+    <app-about/>
+</div>
+<div>
     <h1>Derniers projets</h1>
     @for (projectCard of projectCards | slice: 0: 3 ; track $index ) {
     <div [id]="'project-preview-' + $index">
