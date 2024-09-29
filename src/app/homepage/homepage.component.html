@@ -1,20 +1,20 @@
 <div>
-    <p id="job-title">FULL-STACK DEVELOPER</p>
+    <p id="job-title">DEVELOPPEUSE FULL-STACK</p>
     <h1>BERGAGLIA <br> Olivia</h1>
-    <p>Hi, I'm a full-stack developer student based in Nantes, France.</p>
-    <p>I'm currently looking for an alternance, so don't hesitate to reach me via any contact form !</p>
+    <p>Hello, moi c'est Olivia, étudiante dev full stack !</p>
+    <p>Je suis actuellement à la recherche d'une alternance, alors n'hésitez pas à me joindre via mes contacts... ;)</p>
 </div>
 <div>
-    <h1>Last projects</h1>
+    <h1>Derniers projets</h1>
     @for (projectCard of projectCards | slice: 0: 3 ; track $index ) {
     <div [id]="'project-preview-' + $index">
         <app-project-preview [projectPreview]="projectCard" />
     </div>
     }
-    <a [routerLink]="['/projects']">See more projects >></a>
+    <a [routerLink]="['/projects']">Plus de projets >></a>
 </div>
 <div>
     <h1>{{ contact.title }}</h1>
     <app-form />
-    <button (click)="onContactClick()">See all</button>
+    <button (click)="onContactClick()">Tous les contacts</button>
 </div>

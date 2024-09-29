@@ -1,12 +1,12 @@
 <div>
     <h1>{{ contact.title }}</h1>
-    <a routerLink="/home">Get back...</a>
+    <a routerLink="/home">Accueil</a>
     <p>{{ contact.text }}</p>
 
     <p>Email : <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
-    <p>Phone : <a href="tel:+33{{ contact.phone }}">0{{ contact.phone }}</a></p>
-    <p><a href="https://www.linkedin.com/in/{{ contact.linkedin }}" target="_blank">LinkedIn</a></p>
-    <p><a href="https://github.com/{{ contact.github }}" target="_blank">GitHub</a></p>
+    <p>Téléphone : <a href="tel:+33{{ contact.phone }}">0{{ contact.phone }}</a></p>
+    <p><a href="{{ contact.linkedin }}" target="_blank">LinkedIn</a></p>
+    <p><a href="{{ contact.github }}" target="_blank">GitHub</a></p>
 
     <app-form />
 

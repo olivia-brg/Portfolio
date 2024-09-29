@@ -17,5 +17,5 @@
     @if (projectCard.gitLink) {
         <a [href]="projectCard.gitLink">Git</a>
     }
-    <p>Created on : {{ projectCard.createdAt | date: 'MMMM yyyy' | lowercase}}</p>
+    <p>Développer en {{ projectCard.createdAt | date: 'MMMM yyyy' | lowercase}}</p>
 </div>
