@@ -8,22 +8,22 @@ import { ProjectCard } from "../models/project-card";
 export class ProjectsService {
 
   private projectCards: ProjectCard[] = [
-    new ProjectCard(
-      `O discount`,
-      `Group project`,
-      `A platform to sell your soul.`,
-      new Date('2024-09'),
-      `https://les10meilleurs.net/wp-content/uploads/2022/01/Miliboo-meubles-1024x404.jpg`
-    ).withDevelopmentTime('Less than 4 weeks'),
 
     new ProjectCard(
       `Don't Trigger Me`,
-      `Group project`,
-      `A Chrome extension that provides customizable trigger warnings by automatically censoring specific words or phrases on web pages you visit. Users can choose from pre-defined categories or manually add words they'd prefer to avoid, creating a safer and more comfortable browsing experience tailored to their needs.`,
+      `Projet en groupe`,
+      `Extension chrome qui permet de censurer des pages par catégories (agression, viol etc), ou en y entrant nos propre "trigger words".`,
       new Date('2024-08'),
       `https://jf-blog.fr/wp-content/uploads/2021/11/Google-Chrome-Extensions.jpg`
-    ).withDevelopmentTime('Less than 2 weeks')
-    .withGitLink('https://github.com/olivia-brg/Don-t_Trigger_Me'),
+    ).withDevelopmentTime('Moins de 2 semaines')
+    .withGitLink('https://github.com/olivia-brg/Don-t_Trigger_Me')
+    .withFullDescription([
+      `L'objectif de ce projet était de travailler sur l'asynchrone, manipuler le DOM, et utiliser l'API chrome.`,
+      `L'idée m'est venu car nous étions submerger par les information sur les viols de Mazan au moment du lancement du projet. Nous avons donc souhaité faire une extension qui puisse protéger des internautes sensibles à certains sujets.`,
+      `Nous avons commencer en structurant le projet et avec un code existant, dont nous avons retro enginerer le fonctionnement. Une fois bien assimiler, nous nous sommes debarasser des feature dont nous n'avions pas besoin afin de garder les fonctions centrale à notre projet : la capacité de remplacer les mot d'une liste donnée sur la page active.`,
+      `Le principe se décompose en plusieurs élément. Le premier est de fournir la liste, qui pour le moment est coder en dur. Il fallait également que l'extension soit capable d'analyser tout le code HTML présent avec un craller. Grâce à ça, la troisième partie du programme allait remplacer dynamique les lettres des mots concordant avec sa "base de donnée" avec des astérisques.`,
+      `Pendant que mes collègues travaillaient sur la possibilité d'ajouter manuellement des mots, j'ai commencer à générer un JSON comportant différentes catégories et sous catégorie qui me servirait a ajouter des liste entière de mot et de leurs dérivés.`
+    ]),
 
     new ProjectCard(
       `Dashboard`,
@@ -42,7 +42,7 @@ export class ProjectsService {
       `./assets/images/chatgrin.png`
     )
       .withDevelopmentTime('Less than 2 weeks')
-      .withFullDescription('The goal of this project was to make us understand many fundamentals concept of programming (from physics to architecture) and learning to work with other people. We had to think about how could we work in different files and merge it (without git since it was the first project), how to efficiently communicate and so on...')
+      .withFullDescription(['The goal of this project was to make us understand many fundamentals concept of programming (from physics to architecture) and learning to work with other people. We had to think about how could we work in different files and merge it (without git since it was the first project), how to efficiently communicate and so on...'])
       .withGitLink('https://github.com/olivia-brg/Chat_grin'),
 
   ];

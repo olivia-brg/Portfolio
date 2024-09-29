@@ -8,7 +8,11 @@
     <img [src]="projectCard.imagePath" [alt]="projectCard.title">
     <p>{{ projectCard.description }}</p>
     @if (projectCard.fullDescription) {
-        <p>{{ projectCard.fullDescription }}</p>
+        @for (paragraphs of projectCard.description; track $index) {
+            <section class="project-paragraph"> 
+                <p>{{ projectCard.fullDescription[$index]}}</p>
+            </section>
+            }
     }
     @if (projectCard.gitLink) {
         <a [href]="projectCard.gitLink">Git</a>

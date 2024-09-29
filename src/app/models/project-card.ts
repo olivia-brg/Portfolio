@@ -1,7 +1,7 @@
 export class ProjectCard {
 
     developmentTime?: string;
-    fullDescription?: string;
+    fullDescription?: string[];
     gitLink?: string;
     id: string;
 
@@ -25,11 +25,11 @@ export class ProjectCard {
         return this;
     }
 
-    setFullDescription(fullDescription: string): void {
+    setFullDescription(fullDescription: string[]): void {
         this.fullDescription = fullDescription;
     }
     
-    withFullDescription(fullDescription: string): ProjectCard {
+    withFullDescription(fullDescription: string[]): ProjectCard {
         this.setFullDescription(fullDescription);
         return this;
     }
