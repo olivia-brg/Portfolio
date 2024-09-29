@@ -2,6 +2,7 @@ export class ProjectCard {
 
     developmentTime?: string;
     fullDescription?: string;
+    gitLink?: string;
     id: string;
 
     constructor (
@@ -30,6 +31,15 @@ export class ProjectCard {
     
     withFullDescription(fullDescription: string): ProjectCard {
         this.setFullDescription(fullDescription);
+        return this;
+    }
+
+    setGitLink(gitLink: string): void {
+        this.gitLink = gitLink;
+    }
+    
+    withGitLink(gitLink: string): ProjectCard {
+        this.setGitLink(gitLink);
         return this;
     }
 }

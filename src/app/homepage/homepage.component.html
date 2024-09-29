@@ -7,8 +7,8 @@
 <div>
     <h1>Last projects</h1>
     @for (projectCard of projectCards | slice: 0: 3 ; track $index ) {
-        <app-project-preview [projectPreview]="projectCard"/>
-    <div>
+    <div [id]="'project-preview-' + $index">
+        <app-project-preview [projectPreview]="projectCard" />
     </div>
     }
     <a [routerLink]="['/projects']">See more projects >></a>

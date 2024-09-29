@@ -3,10 +3,10 @@
     <a routerLink="/home">Get back...</a>
     <p>{{ contact.text }}</p>
 
-    <p>Email : <a href="mailto:{{ contact.email }}"><strong>{{ contact.email }}</strong></a></p>
-    <p>Phone : <a href="tel:+33{{ contact.phone }}"><strong>0{{ contact.phone }}</strong></a></p>
-    <p><a href="https://www.linkedin.com/in/{{ contact.linkedin }}" target="_blank"><strong>LinkedIn</strong></a></p>
-    <p><a href="https://github.com/{{ contact.github }}" target="_blank"><strong>GitHub</strong></a></p>
+    <p>Email : <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+    <p>Phone : <a href="tel:+33{{ contact.phone }}">0{{ contact.phone }}</a></p>
+    <p><a href="https://www.linkedin.com/in/{{ contact.linkedin }}" target="_blank">LinkedIn</a></p>
+    <p><a href="https://github.com/{{ contact.github }}" target="_blank">GitHub</a></p>
 
     <app-form />
 
