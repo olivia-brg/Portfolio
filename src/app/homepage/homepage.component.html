@@ -1,13 +1,13 @@
-<div>
+<div class="section">
     <p id="job-title">DEVELOPPEUSE FULL-STACK</p>
     <h1>BERGAGLIA <br> Olivia</h1>
     <p>Hello, moi c'est Olivia, étudiante dev full stack !</p>
     <p>Je suis actuellement à la recherche d'une alternance, alors n'hésitez pas à me joindre via mes contacts... ;)</p>
 </div>
-<div>
+<div class="section">
     <app-about/>
 </div>
-<div>
+<div class="section">
     <h1>Derniers projets</h1>
     @for (projectCard of projectCards | slice: 0: 3 ; track $index ) {
     <div [id]="'project-preview-' + $index">
@@ -16,7 +16,7 @@
     }
     <a [routerLink]="['/projects']">Plus de projets >></a>
 </div>
-<div>
+<div class="section">
     <h1>{{ contact.title }}</h1>
     <app-form />
     <button (click)="onContactClick()">Tous les contacts</button>

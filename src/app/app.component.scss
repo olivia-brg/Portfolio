@@ -2,4 +2,8 @@ app-header {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2vh;
 }
