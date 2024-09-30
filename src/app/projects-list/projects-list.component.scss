@@ -1,32 +1,31 @@
 .cards-container {
     display: flex;
-    // justify-content: center;
+    justify-content: center;
 
-    .cards {
-        
-        .single-card {
-            // margin-bottom: 50px;
-            background-color: rgb(255, 182, 182, 0.5);
-            box-shadow: lightgray 4px 4px 20px;
-          
-            width: 90vw;
-            height: 80vh;
 
-            &:hover {
-                cursor: pointer;
-                // width: 51%;
-                background-color: rgb(179, 255, 128);
-              }
-            
+
+    .single-card {
+        margin-bottom: 50px;
+        background-color: rgb(255, 182, 182, 0.5);
+        box-shadow: lightgray 4px 4px 20px;
+
+        width: 90vw;
+        height: 80vh;
+
+        &:hover {
+            cursor: pointer;
+            // width: 51%;
+            background-color: rgb(179, 255, 128);
+        }
+
+        .project-card {
+            box-sizing: border-box;
+            width: 50%;
+            margin: 20px auto;
+            padding: 10px 30px;
         }
     }
-    
+
+
 }
 
-.bottom {
-    height: 2000px;
-    // width: 100vw;
-    background-color: green;
-    position: absolute;
-    z-index: 10;
-}

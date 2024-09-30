@@ -7,3 +7,11 @@ app-header {
     position: sticky;
     top: 2vh;
 }
+
+.bottom {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(250, 236, 255);
+    position: absolute;
+    z-index: 10;
+}

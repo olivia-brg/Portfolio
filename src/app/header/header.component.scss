@@ -14,12 +14,13 @@
     padding: 0;
     
     border: solid;
-    border-color: var(--accent-color);
+    border-color: rgba(85, 0, 197, 0.26);
     border-width: 1px;
     
     align-items: center;
     
-    background-color: #EEE;
+    background-color: #38383827;
+    backdrop-filter: blur(5px);
     
     h1 {
         height: fit-content;

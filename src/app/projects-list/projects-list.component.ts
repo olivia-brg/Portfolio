@@ -41,18 +41,18 @@ export class ProjectsListComponent implements OnInit {
   //       scrollTrigger: {
   //         trigger: card,
   //         start: () => `top top+=300`,
-  //         end: () => `top top+=50`,
-  //         scrub: true,
+  //         end: () => `top top+=150`,
+  //         scrub: false,
   //         markers: true,
   //         invalidateOnRefresh: true
   //       },
   //       ease: "power1.out",
-  //       // scale: () => 1 - (cards.length - index) * 0.025
+  //       scale: () => 1 - (cards.length - index) * 0.025
   //     });
 
   //     ScrollTrigger.create({
   //       trigger: card,
-  //       start: "top top+=50",
+  //       start: "top top+=150",
   //       pin: true,
   //       anticipatePin: 1,
   //       pinSpacing: false,
