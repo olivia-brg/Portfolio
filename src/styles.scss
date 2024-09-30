@@ -1,11 +1,23 @@
 * {
     font-family: Roboto, Helvetica, sans-serif;
-    --accent-color: #d017b8;
     scroll-behavior: smooth;
+    
+    --accent-color: #d017b8;
+    --almost-black-color: #0d0d0f;
+    --font-white: #f3f3f3;
 
     body {
         margin: 0;
         padding: 0;
+        background-color: var(--almost-black-color);
+        color: var(--font-white);
+
+        h1 {
+            background-image: url(../public/assets/images/holo2.png);
+            background-size: 100%;
+            background-clip: text;
+            color: transparent;
+        }
 
         button {
             background-color: transparent;
