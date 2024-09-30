@@ -10,6 +10,19 @@
     }
 
     #projects {
+
         margin-bottom: 10em;
+        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        h1 {
+            margin: 15vh 0 15vh 0;
+        }
+
+        a{
+            order: 1;
+        }
     }
 }

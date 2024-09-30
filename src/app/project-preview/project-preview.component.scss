@@ -1,5 +1,13 @@
-h2, img {
-    &:hover{
+img {
+    display: block;
+
+    border-radius: 35px;
+
+    object-position: 50% 50%;
+    object-fit: cover;
+
+    h2,
+    &:hover {
         cursor: pointer;
     }
 }

@@ -1,7 +1,7 @@
 * {
     font-family: Roboto, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    
+
     --accent-color: #d017b8;
     --almost-black-color: #0d0d0f;
     --font-white: #f3f3f3;
@@ -17,6 +17,13 @@
             background-size: 100%;
             background-clip: text;
             color: transparent;
+            font-size: 3em;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 3em;
         }
 
         button {
@@ -39,6 +46,72 @@
         ul {
             list-style-type: none;
         }
-    }
 
+        .card {
+            position: relative;
+
+            .preview-text {
+                position: absolute;
+                top: 30%;
+                left: 50vw;
+
+                // &:hover {
+                //     transition: margin-left 2s;
+                // }
+
+                p {
+                    margin: 0;
+                    font-size: 3em;
+                }
+            }
+
+            &[id="project-preview-0"] {
+
+                left: 14vw;
+
+                img {
+                    height: 46vh;
+                    width: 42vw;
+                }
+
+                .preview-text {
+                    position: absolute;
+                    top: 18%;
+                    left: 38.5%;
+                }
+
+            }
+
+            &[id="project-preview-1"] {
+
+                left: 50vw;
+                top: 8vh;
+
+                img {
+                    height: 45vh;
+                    width: 31.5vw;
+                    height: 63vh;
+                }
+
+
+                .preview-text {
+                    position: absolute;
+                    text-align: right;
+                    top: 30%;
+                    left: 0%;
+                }
+            }
+
+            &[id="project-preview-2"] {
+
+                left: 14vw;
+
+                img {
+                    height: 45vh;
+                    width: 42vw;
+                }
+            }
+        }
+
+    }
 }
