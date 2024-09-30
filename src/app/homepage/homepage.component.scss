@@ -1,16 +1,15 @@
 .homepage {
-    
+
     .section {
         min-height: 100vh;
     }
-    
+
     #title {
         display: grid;
         grid-template: 1fr 1fr 1fr / 1fr 1fr;
     }
-    
+
     #projects {
         margin-bottom: 10em;
     }
-    
 }

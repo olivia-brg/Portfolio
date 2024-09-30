@@ -1,3 +1,3 @@
 <h2 (click)="onViewProject()">{{ projectPreview.title | uppercase }}</h2>
-<img [src]="projectPreview.imagePath" [alt]="projectPreview.title"><br>
+<img [src]="projectPreview.imagePath" [alt]="projectPreview.title" (click)="onViewProject()"><br>
 <p>{{ projectPreview.createdAt | date: 'MMM yyyy'}}</p>
