@@ -53,11 +53,9 @@
             .preview-text {
                 position: absolute;
                 top: 30%;
-                left: 50vw;
-
-                // &:hover {
-                //     transition: margin-left 2s;
-                // }
+                transform: translateX(50%);
+                transform: translateY(50%);
+                max-width: 25vw;
 
                 p {
                     margin: 0;
@@ -68,6 +66,7 @@
             &[id="project-preview-0"] {
 
                 left: 14vw;
+                width: 62vw;
 
                 img {
                     height: 46vh;
@@ -77,15 +76,18 @@
                 .preview-text {
                     position: absolute;
                     top: 18%;
-                    left: 38.5%;
+                    transform: translateX(150%);
                 }
 
+                // &:hover {
+                //     translate: 15px;
+                // }
             }
 
             &[id="project-preview-1"] {
 
                 left: 50vw;
-                top: 8vh;
+                top: 10vh;
 
                 img {
                     height: 45vh;
@@ -97,8 +99,8 @@
                 .preview-text {
                     position: absolute;
                     text-align: right;
-                    top: 30%;
-                    left: 0%;
+                    transform: translateY(50%);
+                    transform: translateX(-50%); 
                 }
             }
 

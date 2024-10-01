@@ -6,8 +6,8 @@ img {
     object-position: 50% 50%;
     object-fit: cover;
 
-    h2,
-    &:hover {
-        cursor: pointer;
-    }
+}
+
+*:hover {
+    cursor: pointer;
 }

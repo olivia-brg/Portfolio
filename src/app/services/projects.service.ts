@@ -26,7 +26,7 @@ export class ProjectsService {
       ]),
 
     new ProjectCard(
-      `Dashboard`,
+      `Dashboard test de titre plus long`,
       `Group project`,
       `A web dashboard project that was created to help us learn how to work with APIs. We integrated a news API to display the latest headlines, a map showing Bicloo bike stations that displays available bikes or parking spots, and NASA's image API to feature an awesome, daily-changing background that can also run as a slideshow. Additionally, we included an API that shows upcoming public holidays for quick reference.`,
       new Date('2024-07'),
