@@ -1,10 +1,35 @@
 * {
+
+    @font-face {
+        font-family: 'TT Alientz'; /* C'est ici que tu choisis le nom de la police */
+        src: url('../public/assets/fonts/TT\ Alientz\ Trial\ Grotesque.otf') format('opentype');
+        font-weight: normal; /* D'autres options incluent bold, etc. */
+        font-style: normal;  /* Ou italic si c'est le cas */
+    }
+
+    @font-face {
+        font-family: 'Agaste'; /* C'est ici que tu choisis le nom de la police */
+        src: url('../public/assets/fonts/GalanoGrotesqueRegular.otf') format('opentype');
+        font-weight: normal; /* D'autres options incluent bold, etc. */
+        font-style: normal;  /* Ou italic si c'est le cas */
+    }
+
+    @font-face {
+        font-family: 'Helvetica Now Display';
+        src: local('Helvetica Now Display Regular'), local('Helvetica-Now-Display-Regular'),
+            url('../public/assets/fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+      }
+    
     font-family: Roboto, Helvetica, sans-serif;
     scroll-behavior: smooth;
 
     --accent-color: #d017b8;
     --almost-black-color: #0d0d0f;
-    --font-white: #f3f3f3;
+    --almost-black-transparent: #0d0d0f98;
+    --font-white: #cfcfcf;
+    --title-white: #f4f4f4;
 
     body {
         margin: 0;
@@ -18,12 +43,21 @@
             background-clip: text;
             color: transparent;
             font-size: 3em;
+            margin: 0;
         }
 
         h2 {
             margin: 0;
             padding: 0;
             font-size: 3em;
+        }
+
+        h1, h2, h3 {
+            font-family: 'TT Alientz', sans-serif;
+        }
+
+        p, a {
+            font-family: 'Agaste';
         }
 
         button {
@@ -49,6 +83,7 @@
 
         .card {
             position: relative;
+            width: fit-content;
 
             .preview-text {
                 position: absolute;
@@ -100,7 +135,7 @@
                     position: absolute;
                     text-align: right;
                     transform: translateY(50%);
-                    transform: translateX(-50%); 
+                    transform: translateX(-80%); 
                 }
             }
 

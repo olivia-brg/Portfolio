@@ -1,27 +1,62 @@
 .homepage {
 
     .section {
-        min-height: 100vh;
+        min-height: max(100vh, 920px);
     }
 
-    #title {
-        display: grid;
-        grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    .title {
+        display: flex;
+        position: relative;
+
+        top: 210px;
+        left: 12vw;
+
+        width: fit-content;
+
+
+        h1 {
+            font-size: 10em;
+            margin: 10px 0 0 0;
+            line-height: 0.85;
+        }
+
+        #job-title {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        #description {
+            height: fit-content;
+            width: 20vw;
+            min-width: 300px;
+
+            position: absolute;
+            top: 425px;
+
+            padding-left: 2vw;
+            border-left: solid var(--font-white);
+
+            font-size: 1.5em;
+
+            word-wrap: break-word;
+            /* Gère les débordements de texte */
+            overflow-wrap: break-word;
+        }
     }
 
     #projects {
 
         margin-bottom: 10em;
-        
+
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
 
         h1 {
-            margin: 15vh 0 15vh 0;
+            margin: 0;
         }
 
-        a{
+        a {
             order: 1;
         }
     }

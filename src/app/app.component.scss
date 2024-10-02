@@ -1,11 +1,10 @@
 app-header {
-    display: flex;
-    justify-content: center;
     margin-bottom: 20px;
 
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
 
     z-index: 10;
 }
@@ -13,7 +12,9 @@ app-header {
 .bottom {
     height: 100vh;
     width: 100vw;
-    background-color: rgb(250, 236, 255);
+    
     position: absolute;
     z-index: 10;
+    
+    background-color: rgb(250, 236, 255);
 }
