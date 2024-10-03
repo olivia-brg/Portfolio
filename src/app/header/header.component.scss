@@ -21,7 +21,7 @@
     align-items: center;
 
     background-color: var(--almost-black-transparent);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
 
     h3 {
         height: fit-content;
@@ -55,7 +55,7 @@
                 margin: 0 1vw;
                 padding: 0.5em;
                 text-decoration: none;
-                color: white;
+                color: var(--font-white);
                 position: relative;
 
                 font-size: 1.5em;
