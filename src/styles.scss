@@ -18,7 +18,7 @@
     scroll-behavior: smooth;
 
     --accent-color: #fea3f0;
-    --almost-black-color: #0d0d0f;
+    --almost-black: #0d0d0f;
     --almost-black-transparent: #0d0d0fd3;
     --font-white: #c2c2c2;
     --title-white: #f4f4f4;
@@ -26,12 +26,13 @@
     body {
         margin: 0;
         padding: 0;
-        background-color: var(--almost-black-color);
+        background-color: var(--almost-black);
         color: var(--font-white);
 
         h1 {
-            font-size: 3em;
+            font-size: 10em;
             margin: 0;
+            line-height: 0.85;
 
             background-image: url("../public/assets/images/holo2.png");
             background-size: 200%;
@@ -59,6 +60,7 @@
 
         p, a {
             font-family: 'Galano';
+            // font-size: 1.5em;
         }
 
         button {

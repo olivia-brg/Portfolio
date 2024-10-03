@@ -1,0 +1,20 @@
+* {
+    --shift: 200px;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.5;
+
+    position: relative;
+    top: var(--shift);
+    left: 50vw;
+
+    width: max(40vw);
+}
+
+h1 {
+    position: relative;
+    top: var(--shift);
+    left: 30vw;
+}
