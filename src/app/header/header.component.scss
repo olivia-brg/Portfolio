@@ -1,5 +1,5 @@
 #navbar {
-    --navbar-height: 4em;
+    --navbar-height: 5em;
     --navbar-min-width: 40em;
 
     color: var(--font-white);
@@ -15,7 +15,7 @@
     padding: 0;
 
     border: solid;
-    box-shadow: rgba(85, 0, 197, 0.623) 0 4px 10px;
+    box-shadow: rgba(85, 0, 197, 0.425) 0 4px 20px;
     border-width: 1px;
 
     align-items: center;
@@ -30,11 +30,18 @@
         align-self: center;
 
         background-image: url("../../../public/assets/images/holo2.png");
-        background-size: 100%;
+        background-size: 200%;
         background-clip: text;
+        background-position-x: -100%;
+        color: transparent;
+
+        font-size: 1.5em;
+
+        transition: background-position-x 3s ease;
+
 
         &:hover {
-            color: transparent;
+            background-position-x: 0%;
         }
     }
 
@@ -44,44 +51,65 @@
 
         li {
             a {
+                text-decoration: none !important;
                 margin: 0 1vw;
                 padding: 0.5em;
                 text-decoration: none;
                 color: white;
                 position: relative;
 
+                font-size: 1.5em;
+
                 &::after {
                     content: '';
                     position: absolute;
                     width: 0;
-                    height: 4px;
-                    background-color: var(--accent-color);
-                    left: 0;
+                    height: 6px;
+                    background-image: url("../../../public/assets/images/holo2.png");
+                    background-size: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
                     bottom: -12px;
                     transition: width 0.3s ease;
                     border-radius: 15px;
+                    z-index: 10;
                 }
 
                 &:hover::after {
-                    width: 100%;
+                    width: 50%;
                 }
 
+                &.active::after {
+                    width: 50%;
+                }
 
+                &.active:hover::after {
+                    width: 50%;
+                    /* Prevent changes to underline on hover for active links */
+                }
 
                 &.active {
-                     text-decoration: none;
-                 }
+                    text-decoration: none;
+                    background-image: url("../../../public/assets/images/holo2.png");
+                    background-size: 200%;
+                    background-clip: text;
+                    background-position-x: -100%;
+                    color: transparent;
+                }
 
             }
         }
     }
+
     .underline {
         position: absolute;
-        height: 4px;
-        background-color: var(--accent-color);
+        height: 6px;
+        bottom: -0.1px;
+        background-image: url("../../../public/assets/images/holo2.png");
+        background-size: 100%;
         width: 0;
         transition: all 0.3s ease;
         border-radius: 15px;
     }
-    
+
 }

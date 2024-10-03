@@ -1,26 +1,26 @@
 * {
 
     @font-face {
-        font-family: 'TT Alientz'; /* C'est ici que tu choisis le nom de la police */
+        font-family: 'TT Alientz';
         src: url('../public/assets/fonts/TT\ Alientz\ Trial\ Grotesque.otf') format('opentype');
-        font-weight: normal; /* D'autres options incluent bold, etc. */
-        font-style: normal;  /* Ou italic si c'est le cas */
+        font-weight: normal;
+        font-style: normal;
     }
 
     @font-face {
-        font-family: 'Galano'; /* C'est ici que tu choisis le nom de la police */
+        font-family: 'Galano';
         src: url('../public/assets/fonts/GalanoGrotesqueRegular.otf') format('opentype');
-        font-weight: normal; /* D'autres options incluent bold, etc. */
-        font-style: normal;  /* Ou italic si c'est le cas */
+        font-weight: normal;
+        font-style: normal;
     }
     
     font-family: Roboto, Helvetica, sans-serif;
     scroll-behavior: smooth;
 
-    --accent-color: #d017b8;
+    --accent-color: #fea3f0;
     --almost-black-color: #0d0d0f;
     --almost-black-transparent: #0d0d0f98;
-    --font-white: #cfcfcf;
+    --font-white: #c2c2c2;
     --title-white: #f4f4f4;
 
     body {
@@ -141,6 +141,5 @@
                 }
             }
         }
-
     }
 }
