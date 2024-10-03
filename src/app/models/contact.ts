@@ -10,7 +10,6 @@ export class Contact {
         public github: string,
     ) {
         this.id = crypto.randomUUID().substring(0, 8);
-        
     };
 
 

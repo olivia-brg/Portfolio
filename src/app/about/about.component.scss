@@ -10,11 +10,17 @@ p {
     top: var(--shift);
     left: 50vw;
 
-    width: max(40vw);
+    width: max(40vw, 500px);
 }
 
 h1 {
     position: relative;
     top: var(--shift);
     left: 30vw;
+
+    width: fit-content;
+
+}
+#second {
+    margin-top: -.5em;
 }

@@ -49,34 +49,34 @@ export class HomepageComponent implements OnInit {
     this.router.navigateByUrl('contact');
   }
   
-  ngAfterViewInit() {
-    // Vérifie si l'URL actuelle est la route "home"
-    if (this.router.url === '/home') { // Change "/home" selon la route que tu veux vérifier
-      this.initializeScrollTriggers(); // Appelle une méthode dédiée pour initialiser les triggers
-    }
-  }
+  // ngAfterViewInit() {
+  //   // Vérifie si l'URL actuelle est la route "home"
+  //   if (this.router.url === '/home') { // Change "/home" selon la route que tu veux vérifier
+  //     this.initializeScrollTriggers(); // Appelle une méthode dédiée pour initialiser les triggers
+  //   }
+  // }
 
-  private initializeScrollTriggers() {
-    this.createScrollTrigger(".about");
-    this.createScrollTrigger(".projects");
-    this.createScrollTrigger(".contact");
-  }
+  // private initializeScrollTriggers() {
+  //   this.createScrollTrigger("#about");
+  //   this.createScrollTrigger("#projects");
+  //   this.createScrollTrigger("#contact");
+  // }
 
-  private createScrollTrigger(triggerSelector: string) {
-    if (this.router.url === '/home') { // Ajoute cette vérification ici
-      gsap.to('.section', 
-        {
-        scrollTrigger: {
-          trigger: triggerSelector, // L'élément qui déclenche l'animation
-          start: "top bottom",      // Démarre quand le haut de l'élément atteint le bas de la fenêtre
-          end: "top top",           // Se termine quand le haut de l'élément atteint le haut de la fenêtre
-          scrub: 1,                 // Suivi de l'animation avec le défilement
-          snap: {
-            snapTo: 1,              // Snap à 1
-            duration: 1.5           // Durée du snap
-          }
-        },
-      });
-    }
-  }
+  // private createScrollTrigger(triggerSelector: string) {
+  //   if (this.router.url === '/home') { // Ajoute cette vérification ici
+  //     gsap.to('.section', 
+  //       {
+  //       scrollTrigger: {
+  //         trigger: triggerSelector, // L'élément qui déclenche l'animation
+  //         start: "top bottom",      // Démarre quand le haut de l'élément atteint le bas de la fenêtre
+  //         end: "top top",           // Se termine quand le haut de l'élément atteint le haut de la fenêtre
+  //         scrub: 1,                 // Suivi de l'animation avec le défilement
+  //         snap: {
+  //           snapTo: 1,              // Snap à 1
+  //           duration: 1.5           // Durée du snap
+  //         }
+  //       },
+  //     });
+  //   }
+  // }
 }

@@ -1,9 +1,10 @@
 <div class="homepage">
     <div class="section">
-        <div class="title">
-            <div id="title">
+        <div id="title">
+            <div>
                 <p id="job-title">DEVELOPPEUSE FULL-STACK</p>
-                <h1>BERGAGLIA <br> Olivia</h1>
+                <h1 id="name">BERGAGLIA</h1>
+                <h1 id="firstname">Olivia</h1>
             </div>
             <div id="description">
                 <p>Hello, moi c'est Olivia, étudiante dev full stack</p>
@@ -13,17 +14,19 @@
             </div>
         </div>
     </div>
-    <div class="section about" id="about">
+    <div class="section" id="about">
         <app-about />
     </div>
-    <div class="section projects" id="projects">
+    <div class="section" id="projects">
         <h1>Derniers projets</h1>
-        @for (projectCard of projectCards | slice: 0: 3 ; track $index ) {
-        <app-project-preview [projectPreview]="projectCard" class="card" [id]="'project-preview-' + $index" />
-        }
+        <div id="preview-cards">
+            @for (projectCard of projectCards | slice: 0: 3 ; track $index ) {
+            <app-project-preview [projectPreview]="projectCard" class="card" [id]="'project-preview-' + $index" />
+            }
+        </div>
         <a [routerLink]="['/projects']">Plus de projets >></a>
     </div>
-    <div class="section contact" id="contact">
+    <div class="section" id="contact">
         <h1>Contactez-moi !</h1>
         <app-form />
         <button (click)="onContactClick()">Tous les contacts</button>

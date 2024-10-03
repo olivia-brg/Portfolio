@@ -4,14 +4,21 @@
         min-height: max(100vh, 920px);
     }
 
-    .title {
-        display: flexbox;
+    #title {
         position: relative;
 
         top: 210px;
         left: 12vw;
 
         width: fit-content;
+
+        #name {
+            margin-top: -.2em;
+        }
+
+        #firstname {
+            margin-top: -.5em;
+        }
 
         #job-title {
             font-size: 3em;
@@ -36,24 +43,40 @@
         }
     }
 
-    .about {
-        left: 2vw;
-    }
-
     #projects {
 
-        margin-bottom: 10em;
-
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
+        height: auto;
 
         h1 {
+            position: relative;
+            top: 170px;
+
+            width: fit-content;
+            left: 20vw;
+
             margin: 0;
+            line-height: 1.2;
         }
 
         a {
             order: 1;
+        }
+
+        #preview-cards {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-top: 250px;
+        }
+    }
+
+    #contact {
+
+        h1 {
+            position: relative;
+            top: 170px;
+
+            width: fit-content;
         }
     }
 }
