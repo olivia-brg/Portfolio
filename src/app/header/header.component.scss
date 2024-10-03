@@ -15,11 +15,12 @@
     padding: 0;
 
     border: solid;
-    box-shadow: rgba(85, 0, 197, 0.425) 0 4px 20px;
-    border-width: 1px;
-
+    border-width: .1px;
+    border-color: var(--font-white);
+    
     align-items: center;
-
+    
+    box-shadow: rgba(85, 0, 197, 0.425) 0 4px 20px;
     background-color: var(--almost-black-transparent);
     backdrop-filter: blur(20px);
 
@@ -28,14 +29,14 @@
         margin: 0;
         justify-self: end;
         align-self: center;
+        
+                font-size: 1.5em;
 
         background-image: url("../../../public/assets/images/holo2.png");
         background-size: 200%;
         background-clip: text;
-        background-position-x: -100%;
+        background-position: -100% 50%;
         color: transparent;
-
-        font-size: 1.5em;
 
         transition: background-position-x 3s ease;
 

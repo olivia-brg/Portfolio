@@ -30,12 +30,21 @@
         color: var(--font-white);
 
         h1 {
-            background-image: url(../public/assets/images/holo2.png);
-            background-size: 100%;
-            background-clip: text;
-            color: transparent;
             font-size: 3em;
             margin: 0;
+
+            background-image: url("../public/assets/images/holo2.png");
+            background-size: 200%;
+            background-clip: text;
+            background-position-x: -100%;
+            color: transparent;
+    
+            transition: background-position-x 3s ease;
+    
+            &:hover {
+                background-position-x: 0%;
+            }
+            
         }
 
         h2 {

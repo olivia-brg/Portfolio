@@ -4,8 +4,6 @@ export class Contact {
     something?: any;
 
     constructor (
-        public title: string,
-        public text: string,
         public email: string,
         public phone: string,
         public linkedin: string,
