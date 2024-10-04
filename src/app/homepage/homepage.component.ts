@@ -50,10 +50,8 @@ export class HomepageComponent implements OnInit {
   }
   
   // ngAfterViewInit() {
-  //   // Vérifie si l'URL actuelle est la route "home"
-  //   if (this.router.url === '/home') { // Change "/home" selon la route que tu veux vérifier
-  //     this.initializeScrollTriggers(); // Appelle une méthode dédiée pour initialiser les triggers
-  //   }
+  //     this.initializeScrollTriggers();
+
   // }
 
   // private initializeScrollTriggers() {
