@@ -17,25 +17,40 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     const navLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.nav-link');
     const underline: HTMLElement | null = document.querySelector('.underline');
+    const defaultLink: HTMLAnchorElement | null = document.querySelector('#accueil');
 
-    if (underline) {
+    if (underline && defaultLink) {
+      const defaultLinkWidth = defaultLink.offsetWidth / 2;
+      const defaultLinkLeft = defaultLink.offsetLeft + defaultLinkWidth / 2;
+
+      underline.style.width = `${defaultLinkWidth}px`;
+      underline.style.left = `${defaultLinkLeft}px`;
+
+      // delete after animation
+      setTimeout(() => {
+        underline.style.width = '0';
+      }, 300); // 300ms -> CSS transition
+
+      // Ajouter des écouteurs d'événements sur chaque lien de navigation
       navLinks.forEach((link: HTMLAnchorElement) => {
         link.addEventListener('click', (e: MouseEvent) => {
           const target = e.target as HTMLAnchorElement;
-          const linkWidth = target.offsetWidth / 2;
-          const linkLeft = target.offsetLeft + linkWidth / 2;
+          if (target) {
+            console.log(target);
 
-          // Appliquer la taille et la position de l'underline
-          underline.style.width = `${linkWidth}px`;
-          underline.style.left = `${linkLeft}px`;
+            const linkWidth = target.offsetWidth / 2;
+            const linkLeft = target.offsetLeft + linkWidth / 2;
 
-          // Gérer la suppression après la transition
-          setTimeout(() => {
-            underline.style.width = '0'; // Réduire à 0 après animation
-          }, 300); // 300ms correspondant à la transition CSS
+            underline.style.width = `${linkWidth}px`;
+            underline.style.left = `${linkLeft}px`;
+
+            // delete after animation
+            setTimeout(() => {
+              underline.style.width = '0';
+            }, 300); // 300ms -> CSS transition
+          }
         });
       });
     }
   }
-
 }
