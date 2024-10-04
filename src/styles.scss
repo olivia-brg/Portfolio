@@ -69,11 +69,10 @@
         }
 
         button {
-            background-color: transparent;
+            background-color: var(--accent-color);
             box-sizing: border-box;
             padding: 5px 10px;
             border: none;
-            box-shadow: lightgray 3px 3px 7px;
             margin-right: 20px;
             outline: none;
             font-size: 20px;

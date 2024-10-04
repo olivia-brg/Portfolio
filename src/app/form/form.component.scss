@@ -1,12 +1,28 @@
-input, textarea{
-    width: 15vw;
-    border-radius: 15px;
-    border: none;
-    background-color: var(--text-box-color);
-    padding-left: 1vw;
-    padding-right: 1vw;
-}
+div {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 
-input {
-    height: 5vh;
+    form {
+
+        font-size: 1.5em;
+
+        input,
+        textarea {
+            min-width: max(40vw, 500px);
+            border-radius: 15px;
+            border: none;
+            background-color: var(--text-box-color);
+            padding-left: 1vw;
+            padding-right: 1vw;
+        }
+
+        input {
+            height: 5vh;
+        }
+
+        button {
+            right:0;
+        }
+    }
 }

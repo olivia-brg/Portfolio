@@ -90,20 +90,21 @@
                 overflow: hidden;
 
                 .arrow {
+                    --transition-timing: 0.4s;
                     display: inline-block;
                     position: relative;
-                    transition: transform 0.3s ease;
+                    transition: transform var(--transition-timing) ease;
 
                     &#arrow1 {
-                        transition-delay: 0s;
+                        transition-delay: calc(var(--transition-timing)*0);
                     }
 
                     &#arrow2 {
-                        transition-delay: 0.04s;
+                        transition-delay: calc(var(--transition-timing)*0.3);
                     }
 
                     &#arrow3 {
-                        transition-delay: 0.08s;
+                        transition-delay: calc(var(--transition-timing)*0.6);
                     }
                 }
             }
@@ -132,7 +133,12 @@
 
         h1 {
             position: relative;
-            top: 170px;
+            top: 90px;
+        }
+        
+        app-form {
+            position: relative;
+            top: 90px;
         }
     }
 }
