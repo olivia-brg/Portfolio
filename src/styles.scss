@@ -13,11 +13,14 @@
         font-weight: normal;
         font-style: normal;
     }
-    
-    font-family: Roboto, Helvetica, sans-serif;
+
+    font-family: Roboto,
+    Helvetica,
+    sans-serif;
     scroll-behavior: smooth;
 
     --accent-color: #fea3f0;
+    --text-box-color: #70005f;
     --almost-black: #0d0d0f;
     --almost-black-transparent: #0d0d0fd3;
     --font-white: #c2c2c2;
@@ -38,13 +41,13 @@
             background-clip: text;
             background-position-x: -100%;
             color: transparent;
-    
+
             transition: background-position-x 3s ease;
-    
+
             &:hover {
                 background-position-x: 0%;
             }
-            
+
         }
 
         h2 {
@@ -53,12 +56,15 @@
             font-size: 3em;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: 'TT Alientz', sans-serif;
             width: auto;
         }
 
-        p, a {
+        p,
+        a {
             font-family: 'Galano';
         }
 
@@ -83,81 +89,90 @@
             list-style-type: none;
         }
 
-        .card {
-            position: relative;
-            width: fit-content;
-            transition: .5s ease;
+        .section {
 
-            .preview-text {
-                position: absolute;
-                max-width: 25vw;
-                
-                p {
-                    margin: 0;
-                    font-size: 3em;
-                }
-            }
-
-            &[id="project-preview-0"] {
-
-                left: 14vw;
-
-                img {
-                    height: 460px;
-                    width: 42vw;
-                }
+            .card {
+                position: relative;
+                width: fit-content;
+                transition: .5s ease;
+                border-radius: 35px;
 
                 .preview-text {
-                    top: 18%;
-                    transform: translateX(39vw);
+                    position: absolute;
+                    max-width: 25vw;
+
+                    p {
+                        margin: 0;
+                        font-size: 3em;
+                    }
+
                 }
+
 
                 &:hover {
-                    transform: translate(1vw);
-                }
-            }
-
-            &[id="project-preview-1"] {
-
-                left: 50vw;
-                top: 120px;
-
-                img {
-                    height: 450px;
-                    width: 31.5vw;
-                    height: 63vh;
+                    box-shadow: white 0 0 50px;
                 }
 
+                &[id="project-preview-0"] {
 
-                .preview-text {
-                    text-align: right;
-                    top: 70%;
-                    right:  30vw
-                    // transform: translateX(-15vw); 
+                    left: 8vw;
+
+                    img {
+                        height: 440px;
+                        width: 44vw;
+                    }
+
+                    .preview-text {
+                        top: 18%;
+                        transform: translateX(39vw);
+                    }
+
+                    &:hover {
+                        transform: translate(1vw);
+                    }
                 }
 
-                &:hover {
-                    transform: translate(-1vw);
+                &[id="project-preview-1"] {
+
+                    left: 60vw;
+                    top: 120px;
+
+                    img {
+                        height: 650px;
+                        width: 31.5vw;
+                    }
+
+
+                    .preview-text {
+                        text-align: right;
+                        top: 70%;
+                        right: 30vw // transform: translateX(-15vw); 
+                    }
+
+                    &:hover {
+                        transform: translate(-1vw);
+                    }
                 }
-            }
 
-            &[id="project-preview-2"] {
+                &[id="project-preview-2"] {
 
-                left: 14vw;
-                top: 200px;
+                    left: 16vw;
+                    top: 200px;
+                    margin-bottom: 400px;
 
-                img {
-                    height: 460px;
-                    width: 42vw;
-                }
+                    img {
+                        height: 500px;
+                        width: 42vw;
+                    }
 
-                .preview-text {
-                    top: 18%;
-                    transform: translateX(39vw);
-                }
+                    .preview-text {
+                        top: 18%;
+                        transform: translateX(39vw);
+                    }
 
-                &:hover {
-                    transform: translate(1vw);
+                    &:hover {
+                        transform: translate(1vw);
+                    }
                 }
             }
         }
