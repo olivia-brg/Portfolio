@@ -1,28 +1,58 @@
-div {
+form {
+    
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    
+    font-size: 1.5em;
+    
+    #inputs {   
+        display: block;
+        width: max(40vw, 500px);
 
-    form {
+        margin-left: inherit;
+        margin-right: inherit;
+    }
 
-        font-size: 1.5em;
+    #text-area {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        input,
-        textarea {
-            min-width: max(40vw, 500px);
-            border-radius: 15px;
-            border: none;
-            background-color: var(--text-box-color);
-            padding-left: 1vw;
-            padding-right: 1vw;
-        }
+    label {
+        position: relative;
+        left: 2vw;
+        font-weight: bold;
+    }
+    
+    
+    input,
+    textarea {
+        margin-top: 10px;
+        padding: 15px 2vw 15px 2vw;
 
-        input {
-            height: 5vh;
-        }
+        min-width: max(40vw, 500px);
+        max-width: 95vw;
+        max-height: 50vh;
 
-        button {
-            right:0;
-        }
+        border: none;
+        border-radius: 30px;
+        
+        background-color: var(--text-box-color);
+        
+        color: var(--font-white);
+        font-size: 0.9em;
+    }
+    
+    input {
+        display: block;
+
+        height: 30px;
+    }
+
+    button {
+        position: relative;
+        right: 0;
     }
 }

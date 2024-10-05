@@ -46,7 +46,6 @@
     #projects {
 
         position: relative;
-        height: max-content;
         display: flex;
         flex-direction: column;
 
@@ -96,15 +95,15 @@
                     transition: transform var(--transition-timing) ease;
 
                     &#arrow1 {
-                        transition-delay: calc(var(--transition-timing)*0);
+                        transition-delay: calc(var(--transition-timing)*0.6);
                     }
-
+                    
                     &#arrow2 {
                         transition-delay: calc(var(--transition-timing)*0.3);
                     }
-
+                    
                     &#arrow3 {
-                        transition-delay: calc(var(--transition-timing)*0.6);
+                        transition-delay: calc(var(--transition-timing)*0);
                     }
                 }
             }
@@ -131,6 +130,11 @@
 
     #contact {
 
+        height: auto;
+        display: flex;
+
+        flex-direction: column;
+
         h1 {
             position: relative;
             top: 90px;
@@ -139,6 +143,20 @@
         app-form {
             position: relative;
             top: 90px;
+        }
+
+        button {
+            width: 12vw;
+            margin: 0 auto 200px auto;            
+
+            border-radius: 100px;
+            
+            position: relative;
+            height: 3em;
+            top: 150px;
+
+            color: white;
+
         }
     }
 }
