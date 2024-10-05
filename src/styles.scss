@@ -78,7 +78,7 @@
 
             font-size: 20px;
             font-weight: 500;
-            
+
             outline: none;
             border: none;
             border-radius: 100px;
@@ -106,6 +106,44 @@
                 transition: .5s ease;
                 border-radius: 35px;
 
+                @keyframes spin {
+                    from {
+                        --angle: 0deg;
+                    }
+
+                    to {
+                        --angle: 360deg;
+                    }
+                }
+
+                property --angle {
+                    syntax: "<angle>";
+                    initial-value: 0deg;
+                    inherits: false;
+                }
+
+                &::after,
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+                    top: 50%;
+                    left: 50%;
+                    translate: -50% -50%;
+                    z-index: -1;
+                    padding: 3px;
+                    border-radius: 35px;
+                    animation: 3s spin linear infinite;
+                }
+
+                &::before {
+                    filter: blur(1.5rem);
+                    opacity: 0.5;
+                }
+
+
                 .preview-text {
                     position: absolute;
                     max-width: 25vw;
@@ -118,9 +156,9 @@
                 }
 
 
-                &:hover {
-                    box-shadow: white 0 0 50px;
-                }
+                // &:hover {
+                //     box-shadow: white 0 0 50px;
+                // }
 
                 &[id="project-preview-0"] {
 

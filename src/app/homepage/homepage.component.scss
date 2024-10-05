@@ -62,20 +62,23 @@
 
         #preview-cards {
             position: relative;
+            margin-top: 250px;
+            
             display: flex;
             flex-direction: column;
-            margin-top: 250px;
             flex-grow: 1;
         }
 
         .project-link {
             position: relative;
             top: -100px;
-            align-self: center;
+
+            color: var(--accent-color);
             font-size: 2em;
             text-decoration: none;
-            color: var(--accent-color);
+
             display: inline-flex;
+            align-self: center;
             align-items: center;
 
             .link-text {
