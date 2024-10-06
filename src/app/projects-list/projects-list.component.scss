@@ -2,25 +2,29 @@
     display: flex;
     justify-content: center;
 
-    .single-card {
-        margin-bottom: 50px;
-        background-color: rgb(255, 182, 182, 0.5);
-        box-shadow: lightgray 4px 4px 20px;
+    .cards {
 
-        width: 90vw;
-        height: 80vh;
+        margin-top: 200px;
 
-        &:hover {
-            cursor: pointer;
-            // width: 51%;
-            background-color: rgb(179, 255, 128);
-        }
+        .single-card {
+            margin-bottom: 50px;
+            box-shadow: rgba(211, 211, 211, 0.178) 4px 4px 20px;
 
-        .project-card {
-            box-sizing: border-box;
-            width: 50%;
-            margin: 20px auto;
-            padding: 10px 30px;
+            width: 90vw;
+            height: 80vh;
+
+            &:hover {
+                cursor: pointer;
+                // width: 91vw;
+                box-shadow: rgba(211, 211, 211, 0.623) 4px 4px 20px;
+            }
+
+            .project-card {
+                box-sizing: border-box;
+                width: 50%;
+                margin: 20px auto;
+                padding: 10px 30px;
+            }
         }
     }
 }
