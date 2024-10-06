@@ -1,58 +1,59 @@
 form {
-    
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
     
     font-size: 1.5em;
     
-    #inputs {   
-        display: block;
-        width: max(40vw, 500px);
-
-        margin-left: inherit;
-        margin-right: inherit;
-    }
-
-    #text-area {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     label {
         position: relative;
         left: 2vw;
         font-weight: bold;
     }
-    
-    
+
+    #inputs {
+        max-width: max(40vw, 500px);
+        margin-left: auto;
+        margin-right: auto;
+        
+        input {
+            width: calc(100% - 4vw);
+            height: 30px;
+        }
+    }
+
+    #text-area {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+
+        
+        textarea {
+            min-width: max(40vw - 4vw, 500px - 4vw);
+            max-width: 95vw;
+            max-height: 50vh;
+        }
+    }
+
     input,
     textarea {
-        margin-top: 10px;
         padding: 15px 2vw 15px 2vw;
-
-        min-width: max(40vw, 500px);
-        max-width: 95vw;
-        max-height: 50vh;
+        margin-top: 10px;
+        margin-bottom: 40px;
 
         border: none;
         border-radius: 30px;
-        
-        background-color: var(--text-box-color);
-        
-        color: var(--font-white);
-        font-size: 0.9em;
-    }
-    
-    input {
-        display: block;
 
-        height: 30px;
+        background-color: var(--text-box-color);
+
+        color: var(--font-white);
+        font-size: 0.7em;
     }
 
     button {
         position: relative;
-        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

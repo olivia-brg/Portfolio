@@ -14,10 +14,12 @@
 
         #name {
             margin-top: -.2em;
+            width: fit-content;
         }
 
         #firstname {
             margin-top: -.5em;
+            width: fit-content;
         }
 
         #job-title {
@@ -133,6 +135,8 @@
 
     #contact {
 
+        --top-shift: 160px;
+
         height: auto;
         display: flex;
 
@@ -140,23 +144,22 @@
 
         h1 {
             position: relative;
-            top: 90px;
+            top: var(--top-shift);
         }
         
         app-form {
             position: relative;
-            top: 90px;
+            top: var(--top-shift);
         }
 
         button {
-            width: 12vw;
-            margin: 0 auto 200px auto;            
-
-            border-radius: 100px;
-            
             position: relative;
             height: 3em;
-            top: 150px;
+            width: 12vw;
+            top: calc(var(--top-shift) + 60px);
+            margin: 0 auto 300px auto;            
+            
+            border-radius: 100px;
 
             color: white;
 
