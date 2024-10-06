@@ -17,10 +17,10 @@
     border: solid;
     border-width: .1px;
     border-color: var(--font-white);
-    
+
     align-items: center;
-    
-    box-shadow: var(--blue-purple) 0 10px 20px, #000000c2 0 -40px 20px;
+
+    box-shadow: var(--blue-purple) 0 10px 20px, #0000005e 0 -40px 20px;
     background-color: var(--almost-black-transparent);
     backdrop-filter: blur(20px);
 
@@ -29,8 +29,8 @@
         margin: 0;
         justify-self: end;
         align-self: center;
-        
-                font-size: 1.5em;
+
+        font-size: 1.5em;
 
         background-image: url("../../../public/assets/images/holo2.png");
         background-size: 200%;
