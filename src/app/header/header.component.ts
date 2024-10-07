@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -51,6 +51,36 @@ export class HeaderComponent implements OnInit {
           }
         });
       });
+    }
+  }
+
+
+  private isDarkMode = false;
+
+  constructor(private renderer: Renderer2) {
+    // Vérifie si un thème est déjà sauvegardé dans le localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      this.isDarkMode = savedTheme === 'dark-mode';
+      this.setDarkMode(this.isDarkMode);
+    }
+  }
+
+  toggleTheme(): void {
+    this.isDarkMode = !this.isDarkMode;
+    this.setDarkMode(this.isDarkMode);
+
+    // Sauvegarde la préférence de l'utilisateur dans le localStorage
+    localStorage.setItem('theme', this.isDarkMode ? 'dark-mode' : 'light-mode');
+  }
+
+  private setDarkMode(isDark: boolean): void {
+    if (isDark) {
+      this.renderer.addClass(document.body, 'dark-mode');
+      this.renderer.removeClass(document.body, 'light-mode'); // Au cas où 'light-mode' est appliqué
+    } else {
+      this.renderer.addClass(document.body, 'light-mode');
+      this.renderer.removeClass(document.body, 'dark-mode');
     }
   }
 }

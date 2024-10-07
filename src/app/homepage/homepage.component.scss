@@ -1,28 +1,28 @@
 .homepage {
 
-    // .img-mask {
-    //     position: absolute;
-    //     z-index: -1;
-    //     top: 250px;
-    //     left: 85vw;
+    .img-mask {
+        position: absolute;
+        z-index: -1;
+        top: 250px;
+        left: 85vw;
 
-    //     width: 300px;
-    //     height: 300px;
+        width: 250px;
+        height: 250px;
 
-    //     background-image: url("../../../public/assets/images/holo2.png");
-    //     background-size: cover;
+        background-image: url("../../../public/assets/images/abstract-holographic-gradient-6.jpg");
+        background-size: cover;
 
-    //     mask-image: url('../../../public/assets/images/filled-cross-480.png');
-    //     mask-size: cover;
-    //     mask-repeat: no-repeat;
-    //     mask-position: center;
+        mask-image: url('../../../public/assets/images/logo/filled-cross-480.png');
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        mask-position: center;
 
-    //     /* Inverser le masque : utiliser le mode complémentaire (soustraction) */
-    //     mask-composite: subtract;
-    //     /* Inverser l'effet pour que les parties noires apparaissent */
-    //     -webkit-mask-composite: subtract;
-    //     /* Support pour WebKit */
-    // }
+        /* Inverser le masque : utiliser le mode complémentaire (soustraction) */
+        mask-composite: subtract;
+        /* Inverser l'effet pour que les parties noires apparaissent */
+        -webkit-mask-composite: subtract;
+        /* Support pour WebKit */
+    }
 
     .section {
         min-height: max(100vh, 920px);
@@ -71,7 +71,7 @@
             bottom: -340px;
 
             padding-left: 2vw;
-            border-left: solid var(--font-white);
+            border-left: solid var(--font-color);
 
             font-size: 1.5em;
 
@@ -120,7 +120,7 @@
             position: relative;
             top: -100px;
 
-            color: var(--font-white);
+            color: var(--font-color);
             font-size: 2em;
             text-decoration: none;
 
@@ -207,7 +207,7 @@
 
             border-radius: 100px;
 
-            color: var(--almost-black)
+            color: var(--filling-color)
 
         }
     }

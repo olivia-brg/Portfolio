@@ -19,28 +19,35 @@
     sans-serif;
     scroll-behavior: smooth;
 
-    --blue-purple: rgba(111, 0, 255, 0.39);
-    --text-box-color: #f5f5f5;
-    --almost-black: #0d0d0f;
-    --almost-black-transparent: #0d0d0fd3;
-    --font-white: #c2c2c2;
+    .light-mode {
+        --text-box-color: #0d0d0f;
+        --filling-color: #f5f5f5;
+        --filling-color-transparent: #f5f5f54d;
+        --font-color: #0d0d0d;
+        --text-background: url("../public/assets/images/vecteezy_ai-generated-iridescent-holographic-patterns-against-a_38815801.jpeg");
+    }
 
-    // --text-box-color: #0d0d0f;
-    // --almost-black: #f5f5f5;
-    // --almost-black-transparent: #f5f5f54d;
-    // --font-white: #0d0d0d;
-
+    .dark-mode {
+        --text-box-color: #f5f5f5;
+        --filling-color: #0d0d0f;
+        --filling-color-transparent: #0d0d0fd3;
+        --font-color: #c2c2c2;
+        --text-background: url("../public/assets/images/holo2.png");
+    }  
+    
     body {
         margin: 0;
         padding: 0;
-        background-color: var(--almost-black);
-        color: var(--font-white);
+
+        transition: background-color 0.3s, color 0.3s;
+        background-color: var(--filling-color);
+        color: var(--font-color);
 
         h1 {
             font-size: 10em;
             margin: 0;
 
-            background-image: url("../public/assets/images/holo2.png");
+            background-image: var(--text-background);
             background-size: 200%;
             background-clip: text;
             background-position-x: -100%;
@@ -73,7 +80,7 @@
         }
 
         button {
-            background-color: var(--font-white);   
+            background-color: var(--font-color);
             // background-image: url(../public/assets/images/holo.jpg);
             // background-size: 100%;
 
@@ -90,7 +97,7 @@
             border: none;
             border-radius: 100px;
 
-            color: var(--almost-black);
+            color: var(--filling-color);
 
             &:active {
                 transform: translate(1px, 1px);

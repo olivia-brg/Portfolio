@@ -2,7 +2,7 @@
     --navbar-height: 5em;
     --navbar-min-width: 40em;
 
-    color: var(--font-white);
+    color: var(--font-color);
 
     display: grid;
     grid-template: var(--navbar-height) / minmax(18em, 1fr) 3fr 1fr;
@@ -16,12 +16,12 @@
 
     border: solid;
     border-width: .1px;
-    border-color: var(--font-white);
+    border-color: var(--font-color);
 
     align-items: center;
 
     // box-shadow: var(--blue-purple) 0 10px 20px, #0000005e 0 -40px 20px;
-    background-color: var(--almost-black-transparent);
+    background-color: var(--filling-color-transparent);
     backdrop-filter: blur(10px);
 
     h3 {
@@ -32,7 +32,7 @@
 
         font-size: 1.5em;
 
-        background-image: url("../../../public/assets/images/holo2.png");
+        background-image: var(--text-background);
         background-size: 200%;
         background-clip: text;
         background-position: -100% 50%;
@@ -56,7 +56,7 @@
                 margin-right: 2vw;
                 padding: 0.5em;
                 text-decoration: none;
-                color: var(--font-white);
+                color: var(--font-color);
                 position: relative;
 
                 font-size: 1.5em;
@@ -66,7 +66,7 @@
                     position: absolute;
                     width: 0;
                     height: 6px;
-                    background-image: url("../../../public/assets/images/holo2.png");
+                    background-image: var(--text-background);
                     background-size: 100%;
                     left: 50%;
                     transform: translateX(-50%);
@@ -91,7 +91,7 @@
 
                 &.active {
                     text-decoration: none;
-                    background-image: url("../../../public/assets/images/holo2.png");
+                    background-image: var(--text-background);
                     background-size: 200%;
                     background-clip: text;
                     background-position-x: -100%;
@@ -106,11 +106,82 @@
         position: absolute;
         height: 6px;
         bottom: -0.1px;
-        background-image: url("../../../public/assets/images/holo2.png");
+        background-image: var(--text-background);
         background-size: 100%;
         width: 0;
         transition: all 0.3s ease;
         border-radius: 15px;
     }
 
+    #darkmode-switch {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .elem {
+            margin-left: 0.5vw;
+            margin-right: 0.5vw;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: var(--filling-color);
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-image: url('../../../public/assets/images/vecteezy_ai-generated-iridescent-holographic-patterns-against-a_38815780.jpeg');
+            background-size: 200%;
+        }
+
+
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    }
 }
