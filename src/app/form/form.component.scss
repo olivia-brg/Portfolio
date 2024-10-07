@@ -31,7 +31,7 @@ form {
         
         textarea {
             min-width: max(40vw - 4vw, 500px - 4vw);
-            max-width: 95vw;
+            max-width: 75vw;
             max-height: 50vh;
         }
     }
@@ -42,10 +42,11 @@ form {
         margin-top: 10px;
         margin-bottom: 40px;
 
-        border: none;
+        border-width: 1px;
+        border-color: var(--font-white);
         border-radius: 30px;
 
-        background-color: var(--text-box-color);
+        background-color: var(--almost-black);
 
         color: var(--font-white);
         font-size: 0.7em;
@@ -53,7 +54,7 @@ form {
 
     button {
         position: relative;
-        left: 50%;
+        left: 70%;
         transform: translateX(-50%);
     }
 }

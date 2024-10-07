@@ -20,13 +20,15 @@
     scroll-behavior: smooth;
 
     --blue-purple: rgba(111, 0, 255, 0.39);
-    --purple: rgba(154, 3, 255, 0.377);
-    --accent-color: #fea3f0;
-    --text-box-color: #3a003263;
+    --text-box-color: #f5f5f5;
     --almost-black: #0d0d0f;
     --almost-black-transparent: #0d0d0fd3;
     --font-white: #c2c2c2;
-    --title-white: #f4f4f4;
+
+    // --text-box-color: #0d0d0f;
+    // --almost-black: #f5f5f5;
+    // --almost-black-transparent: #f5f5f54d;
+    // --font-white: #0d0d0d;
 
     body {
         margin: 0;
@@ -71,7 +73,7 @@
         }
 
         button {
-            background-color: var(--accent-color);   
+            background-color: var(--font-white);   
             // background-image: url(../public/assets/images/holo.jpg);
             // background-size: 100%;
 
@@ -88,7 +90,7 @@
             border: none;
             border-radius: 100px;
 
-            color: white;
+            color: var(--almost-black);
 
             &:active {
                 transform: translate(1px, 1px);
