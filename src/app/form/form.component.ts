@@ -38,11 +38,11 @@ export class FormComponent implements OnInit {
       }, userID)
         .then((result: EmailJSResponseStatus) => {
           this.submitStatus = 'success';
-          this.statusMessage = 'Votre message a été envoyé avec succès!';
+          this.statusMessage = 'Votre message a été envoyé avec succès !';
           this.emailForm.reset();
         }, (error) => {
           this.submitStatus = 'error';
-          this.statusMessage = 'Une erreur s\'est produite lors de l\'envoi du message.';
+          this.statusMessage = "Une erreur s'est produite. Veuillez réessayer ou choisir un autre moyen de contact.";
         });
     }
   }

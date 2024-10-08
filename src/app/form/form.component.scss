@@ -36,7 +36,6 @@ form {
 
         button {
             float: right;
-            // transform: translateX(-50%);
         }
     }
 
@@ -56,11 +55,12 @@ form {
 
         &:focus {
             border-style: none;
+            outline: 2px solid rgb(17, 92, 255);
         }
     }
 
     .error-input {
-        border: solid rgb(244, 33, 46);
+        border: solid var(--error-red);
     }
 
     .err {
@@ -74,20 +74,21 @@ form {
             position: relative;
             top: 0;
             left: 0;
-            color: red;
+            color: var(--error-red);
         }
     }
 }
 
 
 .success {
-    color: var(--email-sended-color);
+    color: var(--font-color);
     width: fit-content;
     margin: auto;
 }
 
 .error {
-    color: red;
-    width: fit-content;
+    color: var(--error-red);
+    width: 20vw;
     margin: auto;
+    text-align: center;
 }
