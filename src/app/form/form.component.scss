@@ -3,9 +3,9 @@ form {
     position: relative;
     transform: translateX(-50%);
     left: 50%;
-    
+
     font-size: 1.5em;
-    
+
     label {
         position: relative;
         left: 2vw;
@@ -16,7 +16,7 @@ form {
         max-width: max(40vw, 500px);
         margin-left: auto;
         margin-right: auto;
-        
+
         input {
             width: calc(100% - 4vw);
             height: 30px;
@@ -28,11 +28,15 @@ form {
         margin-left: auto;
         margin-right: auto;
 
-        
         textarea {
             min-width: max(40vw - 4vw, 500px - 4vw);
             max-width: 75vw;
             max-height: 50vh;
+        }
+
+        button {
+            float: right;
+            // transform: translateX(-50%);
         }
     }
 
@@ -40,21 +44,50 @@ form {
     textarea {
         padding: 15px 2vw 15px 2vw;
         margin-top: 10px;
-        margin-bottom: 40px;
 
-        border-width: 1px;
+        border: 2px solid;
         border-color: var(--font-color);
-        border-radius: 30px;
+        border-radius: 31px;
 
         background-color: var(--filling-color);
 
         color: var(--font-color);
         font-size: 0.7em;
+
+        &:focus {
+            border-style: none;
+        }
     }
 
-    button {
-        position: relative;
-        left: 70%;
-        transform: translateX(-50%);
+    .error-input {
+        border: solid rgb(244, 33, 46);
     }
+
+    .err {
+        height: 10px;
+        margin-bottom: 40px;
+        position: relative;
+        left: 2vw;
+
+        small {
+            font-size: 0.75em;
+            position: relative;
+            top: 0;
+            left: 0;
+            color: red;
+        }
+    }
+}
+
+
+.success {
+    color: var(--email-sended-color);
+    width: fit-content;
+    margin: auto;
+}
+
+.error {
+    color: red;
+    width: fit-content;
+    margin: auto;
 }
