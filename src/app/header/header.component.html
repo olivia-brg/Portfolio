@@ -8,12 +8,5 @@
         </ul>
         <div class="underline"></div>
     </nav>
-    <div id="darkmode-switch">
-        <p class="elem">clair</p>
-        <label class="switch elem">
-            <input type="checkbox" (click)="toggleTheme()">
-            <span class="slider round"></span>
-        </label>
-        <p class="elem">sombre</p>
-    </div>
+    <mat-slide-toggle [checked]="isDarkMode" (change)="toggleTheme()">Mode sombre</mat-slide-toggle>
 </header>

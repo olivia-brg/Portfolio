@@ -1,18 +1,33 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
+    CommonModule,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    MatSlideToggleModule
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss'] // Corrige le 'styleUrls' avec 's'
 })
 
 export class HeaderComponent implements OnInit {
+
+  isDarkMode = false; // Lié au toggle switch
+
+  constructor(private renderer: Renderer2) {
+    // Vérifie si un thème est déjà sauvegardé dans le localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark-mode') {
+      this.isDarkMode = true; // Le switch est activé si dark mode est activé
+      this.setDarkMode(this.isDarkMode);
+    }
+  }
 
   ngOnInit(): void {
     const navLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.nav-link');
@@ -36,8 +51,6 @@ export class HeaderComponent implements OnInit {
         link.addEventListener('click', (e: MouseEvent) => {
           const target = e.target as HTMLAnchorElement;
           if (target) {
-            console.log(target);
-
             const linkWidth = target.offsetWidth / 2;
             const linkLeft = target.offsetLeft + linkWidth / 2;
 
@@ -54,18 +67,6 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-
-  private isDarkMode = false;
-
-  constructor(private renderer: Renderer2) {
-    // Vérifie si un thème est déjà sauvegardé dans le localStorage
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      this.isDarkMode = savedTheme === 'dark-mode';
-      this.setDarkMode(this.isDarkMode);
-    }
-  }
-
   toggleTheme(): void {
     this.isDarkMode = !this.isDarkMode;
     this.setDarkMode(this.isDarkMode);
@@ -77,7 +78,7 @@ export class HeaderComponent implements OnInit {
   private setDarkMode(isDark: boolean): void {
     if (isDark) {
       this.renderer.addClass(document.body, 'dark-mode');
-      this.renderer.removeClass(document.body, 'light-mode'); // Au cas où 'light-mode' est appliqué
+      this.renderer.removeClass(document.body, 'light-mode');
     } else {
       this.renderer.addClass(document.body, 'light-mode');
       this.renderer.removeClass(document.body, 'dark-mode');
