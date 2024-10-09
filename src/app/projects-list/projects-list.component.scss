@@ -8,15 +8,21 @@
 
         .single-card {
             margin-bottom: 50px;
-            box-shadow: rgba(211, 211, 211, 0.178) 4px 4px 20px;
 
-            width: 90vw;
-            height: 80vh;
+            background-color: var(--filling-color-transparent);
+            // box-shadow: rgba(95, 95, 95, 0.075) -5px -5px 10px, rgba(0, 0, 0, 0.226) 5px 5px 10px;
+
+            border-radius: 30px;
+
+            width: 70vw;
+            height: 60vh;
+            transition: all 0.5s ease;
 
             &:hover {
+                background-color: var(--filling-color);
                 cursor: pointer;
                 // width: 91vw;
-                box-shadow: rgba(211, 211, 211, 0.623) 4px 4px 20px;
+                box-shadow: var(--card-shadow)
             }
 
             .project-card {
@@ -27,4 +33,15 @@
             }
         }
     }
+}
+
+.background-img {
+
+    z-index: -1;
+    opacity: var(--background-opacity);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
 }

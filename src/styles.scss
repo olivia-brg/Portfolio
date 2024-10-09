@@ -22,14 +22,15 @@
     scroll-behavior: smooth;
 
     --error-red: rgb(244, 33, 46);
-    
+
     .light-mode {
         --text-box-color: #0d0d0f;
-        --filling-color: #f5f5f5;
+        --filling-color: rgb(230, 230, 230);
         --filling-color-transparent: #f5f5f54d;
         --font-color: #0d0d0d;
         --text-background: url("../public/assets/images/vecteezy_ai-generated-iridescent-holographic-patterns-against-a_38815801.jpeg");
-        --background-opacity: 0.6;
+        --background-opacity: 0.3;
+        --card-shadow: rgb(172, 172, 172) 12px 12px 20px, rgb(255, 255, 255) -10px -10px 20px;
     }
 
     .dark-mode {
@@ -39,6 +40,7 @@
         --font-color: #c2c2c2;
         --text-background: url("../public/assets/images/holo2.png");
         --background-opacity: 0.1;
+        --card-shadow: rgb(0, 0, 0) 12px 12px 25px, rgba(95, 95, 95, 0.623) -5px -5px 20px;
     }  
     
     body {

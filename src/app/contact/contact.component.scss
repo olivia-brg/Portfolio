@@ -6,3 +6,14 @@
         width: fit-content;
     }
 }
+
+.background-img {
+
+    z-index: -1;
+    opacity: var(--background-opacity);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(15px);
+}
