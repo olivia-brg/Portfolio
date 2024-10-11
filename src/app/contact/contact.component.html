@@ -2,14 +2,17 @@
 
 <div id="contact-section">
     <h1>Contact</h1>
-    <a routerLink="/home">Accueil</a>
-    <p>Mon profil vous intéresse, vous souhaitez discuter d'un projet, ou me faire un retour ? N'hésitez pas à me contacter !</p>
+    <!-- <a routerLink="/home">Accueil</a> -->
+    <p id="hook">Mon profil vous intéresse? Vous souhaitez discuter d'un projet, ou me faire un retour ? N'hésitez pas à
+        me contacter !</p>
 
-    <p>Email : <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
-    <p>Téléphone : <a href="tel:+33{{ contact.phone }}">0{{ contact.phone }}</a></p>
-    <p><a href="{{ contact.linkedin }}" target="_blank">LinkedIn</a></p>
-    <p><a href="{{ contact.github }}" target="_blank">GitHub</a></p>
+        <app-form />
 
-    <app-form />
-
+    <span id="contact-links">
+        <div class="icon" id="email"><a href="mailto:{{ contact.email }}"><img src="/assets/images/logo/at-icon.webp" alt="email icon">{{ contact.email }}</a></div>
+        
+        <div class="icon" id="phone"><a href="tel:+33{{ contact.phone }}"><img src="/assets/images/logo/phone-100.png" alt="phone icon">0{{ contact.phone }}</a></div>
+        <div class="icon"><a href="{{ contact.linkedin }}" target="_blank"><img src="/assets/images/logo/linkedin-250.png" alt="linkedin logo">LinkedIn</a></div>
+        <div class="icon"><a href="{{ contact.github }}" target="_blank"><img src="/assets/images/logo/github-250.png" alt="github logo">GitHub</a></div>
+    </span>
 </div>

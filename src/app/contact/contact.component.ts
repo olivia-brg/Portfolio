@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+// import { RouterLink } from '@angular/router';
 import { Contact } from '../models/contact';
 import { ContactService } from '../services/contact.service';
 import { FormComponent } from "../form/form.component";
@@ -8,7 +8,7 @@ import { FormComponent } from "../form/form.component";
   selector: 'app-contact',
   standalone: true,
   imports: [
-    RouterLink,
+    // RouterLink,
     FormComponent
 ],
   templateUrl: './contact.component.html',
