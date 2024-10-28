@@ -18,21 +18,16 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 export class HeaderComponent implements OnInit {
 
-  isDarkMode = false; // Lié au toggle switch
+  isDarkMode: boolean = false;
 
-  constructor(private renderer: Renderer2) {
-    // Vérifie si un thème est déjà sauvegardé dans le localStorage
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark-mode') {
-      this.isDarkMode = true; // Le switch est activé si dark mode est activé
-      this.setDarkMode(this.isDarkMode);
-    }
-  }
+  constructor(private renderer: Renderer2) {}
 
   ngOnInit(): void {
     const navLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.nav-link');
     const underline: HTMLElement | null = document.querySelector('.underline');
     const defaultLink: HTMLAnchorElement | null = document.querySelector('#accueil');
+
+    this.initializeTheme();
 
     if (underline && defaultLink) {
       const defaultLinkWidth = defaultLink.offsetWidth / 2;
@@ -68,6 +63,7 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleTheme(): void {
+    // Bascule entre le mode clair et sombre
     this.isDarkMode = !this.isDarkMode;
     this.setDarkMode(this.isDarkMode);
 
@@ -83,5 +79,22 @@ export class HeaderComponent implements OnInit {
       this.renderer.addClass(document.body, 'light-mode');
       this.renderer.removeClass(document.body, 'dark-mode');
     }
+  }
+
+  private initializeTheme(): void {
+    // Vérifie si une préférence est déjà sauvegardée dans le localStorage
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+      // Applique le thème sauvegardé
+      this.isDarkMode = savedTheme === 'dark-mode';
+    } else {
+      // Si aucune préférence, utilise le thème du navigateur
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      this.isDarkMode = prefersDarkMode;
+    }
+
+    // Applique le thème initial (issu du localStorage ou de la préférence du navigateur)
+    this.setDarkMode(this.isDarkMode);
   }
 }
