@@ -8,21 +8,25 @@
 
         .single-card {
             margin-bottom: 50px;
+            border: 1px;
+            border-color: white;
 
-            background-color: var(--filling-color-transparent);
+            background-color: rgba(255, 255, 255, 0.25);
             // box-shadow: rgba(95, 95, 95, 0.075) -5px -5px 10px, rgba(0, 0, 0, 0.226) 5px 5px 10px;
 
             border-radius: 30px;
 
             width: 70vw;
-            height: 60vh;
+            height: 600px;
             transition: all 0.5s ease;
 
             &:hover {
-                background-color: var(--filling-color);
+                background-color: rgba(255, 255, 255, 0.5);
+                
                 cursor: pointer;
                 // width: 91vw;
-                box-shadow: var(--card-shadow)
+                box-shadow: var(--card-shadow);
+                width: calc(width + 10%);
             }
 
             .project-card {

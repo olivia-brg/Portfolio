@@ -26,11 +26,11 @@
     .light-mode {
         --text-box-color: #0d0d0f;
         --filling-color: rgb(230, 230, 230);
-        --filling-color-transparent: #f5f5f54d;
+        --filling-color-transparent: rgba(245, 245, 245, 0.706);
         --font-color: #0d0d0d;
-        --text-background: url("../public/assets/images/vecteezy_ai-generated-iridescent-holographic-patterns-against-a_38815801.jpeg");
-        --background-opacity: 0.3;
-        --card-shadow: rgb(172, 172, 172) 12px 12px 20px, rgb(255, 255, 255) -10px -10px 20px;
+        --text-background: url("../public/assets/images/abstract-holographic-gradient-1-copy2.jpg");
+        --background-opacity: 0.5;
+        --card-shadow: rgb(172, 172, 172) 12px 12px 20px, rgba(255, 255, 255, .5) -10px -10px 20px;
     }
 
     .dark-mode {
@@ -39,8 +39,8 @@
         --filling-color-transparent: #0d0d0fd3;
         --font-color: #c2c2c2;
         --text-background: url("../public/assets/images/holo2.png");
-        --background-opacity: 0.1;
-        --card-shadow: rgb(0, 0, 0) 12px 12px 25px, rgba(95, 95, 95, 0.623) -5px -5px 20px;
+        --background-opacity: 0.3;
+        --card-shadow: rgb(0, 0, 0) 7px 7px 25px, rgba(146, 146, 146, 0.623) -5px -5px 20px;
     }  
     
     body {
@@ -58,13 +58,12 @@
             background-image: var(--text-background);
             background-size: 200%;
             background-clip: text;
-            background-position-x: -100%;
             color: transparent;
 
             transition: background-position-x 3s ease;
 
             &:hover {
-                background-position-x: 0%;
+                background-position-x: 100%;
             }
 
         }
@@ -139,7 +138,6 @@
 
                 }
 
-
                 &:hover {
                     box-shadow: var(--purple) 0 0 50px;
                 }
@@ -151,15 +149,24 @@
                     img {
                         height: 440px;
                         width: 44vw;
+                        transition: box-shadow 0.5s ease; 
                     }
 
                     .preview-text {
                         top: 18%;
                         transform: translateX(39vw);
+                        transition: transform 0.3s ease; 
                     }
 
                     &:hover {
-                        transform: translate(1vw);
+
+                        .preview-text {
+                            transform: translate(40vw);
+                        }
+
+                        img{
+                            box-shadow: var(--card-shadow);
+                        }
                     }
                 }
 
@@ -171,17 +178,25 @@
                     img {
                         height: 650px;
                         width: 31.5vw;
+                        transition: box-shadow 0.5s ease;
                     }
 
 
                     .preview-text {
                         text-align: right;
                         top: 70%;
-                        right: 30vw // transform: translateX(-15vw); 
+                        right: 30vw; // transform: translateX(-15vw);
+                        transition: transform 0.3s ease; 
                     }
 
                     &:hover {
-                        transform: translate(-1vw);
+                        .preview-text {
+                            transform: translate(-1vw);
+                        }
+
+                        img{
+                            box-shadow: var(--card-shadow);
+                        }
                     }
                 }
 
@@ -194,15 +209,24 @@
                     img {
                         height: 500px;
                         width: 42vw;
+                        transition: box-shadow 0.5s ease; 
                     }
 
                     .preview-text {
                         top: 18%;
                         transform: translateX(39vw);
+                        transition: transform 0.3s ease; 
                     }
 
                     &:hover {
-                        transform: translate(1vw);
+                        
+                        .preview-text {
+                            transform: translate(40vw);
+                        }
+
+                        img{
+                            box-shadow: var(--card-shadow);
+                        }
                     }
                 }
             }
