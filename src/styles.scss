@@ -137,6 +137,7 @@
         }
 
         .background-img {
+            z-index: -1;
 
             opacity: var(--background-opacity);
             position: fixed;

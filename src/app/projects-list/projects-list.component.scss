@@ -41,13 +41,3 @@
         }
     }
 }
-
-.background-img {
-
-    z-index: -1;
-    opacity: var(--background-opacity);
-    position: fixed;
-    left: 0;
-    width: 100%;
-    filter: blur(15px);
-}
