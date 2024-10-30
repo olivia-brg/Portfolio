@@ -3,8 +3,8 @@
     .img-mask {
         position: absolute;
         z-index: 1;
-        top: 250px;
-        left: 85vw;
+        top: 400px;
+        left: 80vw;
 
         border-radius: 100%;
 
@@ -34,18 +34,6 @@
 
     .section {
         min-height: max(100vh, 920px);
-    }
-
-    .background-img {
-
-        opacity: var(--background-opacity);
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        min-width: 1820px;
-        
-        filter: blur(15px);
     }
 
     #title {

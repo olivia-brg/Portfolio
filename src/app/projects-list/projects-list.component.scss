@@ -8,10 +8,13 @@
 
         .single-card {
             margin-bottom: 50px;
-            border: 1px;
-            border-color: white;
 
-            background-color: rgba(255, 255, 255, 0.25);
+            border: solid;
+            border-width: 1px;
+            border-color: var(--filling-color);
+
+            background-color: var(--project-card-background-color);
+            box-shadow: var(--card-shadow);
             // box-shadow: rgba(95, 95, 95, 0.075) -5px -5px 10px, rgba(0, 0, 0, 0.226) 5px 5px 10px;
 
             border-radius: 30px;
@@ -21,11 +24,11 @@
             transition: all 0.5s ease;
 
             &:hover {
-                background-color: rgba(255, 255, 255, 0.5);
+                background-color: var(--project-card-hover-background-color);
                 
                 cursor: pointer;
                 // width: 91vw;
-                box-shadow: var(--card-shadow);
+                box-shadow: var(--card-hover-shadow);
                 width: calc(width + 10%);
             }
 
@@ -43,9 +46,8 @@
 
     z-index: -1;
     opacity: var(--background-opacity);
-    position: absolute;
+    position: fixed;
     left: 0;
     width: 100%;
-    height: 100%;
     filter: blur(15px);
 }

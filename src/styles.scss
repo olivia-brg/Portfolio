@@ -24,23 +24,35 @@
     --error-red: rgb(244, 33, 46);
 
     .light-mode {
-        --text-box-color: #0d0d0f;
+        --text-background: url("../public/assets/images/abstract-holographic-gradient-1-copy2.jpg");
+
+        --text-box-color: rgb(13, 13, 15);
         --filling-color: rgb(230, 230, 230);
         --filling-color-transparent: rgba(245, 245, 245, 0.706);
-        --font-color: #0d0d0d;
-        --text-background: url("../public/assets/images/abstract-holographic-gradient-1-copy2.jpg");
+        --font-color: rgb(13, 13, 13);
+
         --background-opacity: 0.5;
-        --card-shadow: rgb(172, 172, 172) 12px 12px 20px, rgba(255, 255, 255, .5) -10px -10px 20px;
+
+        --card-shadow: rgba(160, 160, 160, .8) 12px 12px 20px, rgba(255, 255, 255, .4) -10px -10px 20px;
+        --card-hover-shadow: rgba(160, 160, 160, 1) 12px 12px 20px, rgba(255, 255, 255, .7) -10px -10px 20px;
+        --project-card-background-color: rgba(255, 255, 255, 0.15);
+        --project-card-hover-background-color: rgba(255, 255, 255, 0.4);
     }
 
     .dark-mode {
-        --text-box-color: #f5f5f5;
-        --filling-color: #0d0d0f;
-        --filling-color-transparent: #0d0d0fd3;
-        --font-color: #c2c2c2;
         --text-background: url("../public/assets/images/holo2.png");
+
+        --text-box-color: rgb(245, 245, 245);
+        --filling-color: rgb(13, 13, 15);
+        --filling-color-transparent: rgba(13, 13, 15, 0.827);
+        --font-color: rgb(194, 194, 194);
+
         --background-opacity: 0.3;
-        --card-shadow: rgb(0, 0, 0) 7px 7px 25px, rgba(146, 146, 146, 0.623) -5px -5px 20px;
+
+        --card-shadow: rgba(0, 0, 0, 7) 7px 7px 25px, rgba(146, 146, 146, 0.6) -5px -5px 20px;
+        --card-hover-shadow: rgb(0, 0, 0) 7px 7px 25px, rgba(146, 146, 146, 0.8) -5px -5px 20px;
+        --project-card-background-color: rgba(0, 0, 0, 0.15);
+        --project-card-hover-background-color: rgba(0, 0, 0, 0.5);
     }  
     
     body {
@@ -60,7 +72,7 @@
             background-clip: text;
             color: transparent;
 
-            transition: background-position-x 3s ease;
+            transition: background-position-x 2.5s ease;
 
             &:hover {
                 background-position-x: 100%;
@@ -88,8 +100,9 @@
 
         button {
             background-color: var(--font-color);
-            // background-image: url(../public/assets/images/holo.jpg);
-            // background-size: 100%;
+            background-image: var(--text-background);
+            background-size: 300%;
+            background-position: 50%;
 
             box-sizing: border-box;
             padding: 5px 10px;
@@ -103,20 +116,36 @@
             outline: none;
             border: none;
             border-radius: 100px;
-
+            
             color: var(--filling-color);
+
+            transition: all .5s ease;
 
             &:active {
                 transform: translate(1px, 1px);
             }
-
-            &:hover {
+            
+            &:hover:not([role=switch]) {
+                background-size: 350%;
                 cursor: pointer;
+                box-shadow: inset 10px 10px 15px rgba(39, 39, 39, 0.432), inset -10px -10px 15px rgba(228, 228, 228, 0.664);
             }
         }
 
         ul {
             list-style-type: none;
+        }
+
+        .background-img {
+
+            opacity: var(--background-opacity);
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            min-width: 1820px;
+            
+            filter: blur(10px);
         }
 
         .section {
@@ -136,10 +165,6 @@
                         font-size: 3em;
                     }
 
-                }
-
-                &:hover {
-                    box-shadow: var(--purple) 0 0 50px;
                 }
 
                 &[id="project-preview-0"] {
