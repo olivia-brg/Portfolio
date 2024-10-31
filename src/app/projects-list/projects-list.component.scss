@@ -8,6 +8,8 @@
 
         .single-card {
             margin-bottom: 50px;
+            margin-left: auto;
+            margin-right: auto;
 
             border: solid;
             border-width: 1px;
@@ -15,7 +17,6 @@
 
             background-color: var(--project-card-background-color);
             box-shadow: var(--card-shadow);
-            // box-shadow: rgba(95, 95, 95, 0.075) -5px -5px 10px, rgba(0, 0, 0, 0.226) 5px 5px 10px;
 
             border-radius: 30px;
 
@@ -27,7 +28,8 @@
                 background-color: var(--project-card-hover-background-color);
                 
                 cursor: pointer;
-                // width: 91vw;
+                width: 71vw;
+                height: 610px;
                 box-shadow: var(--card-hover-shadow);
                 width: calc(width + 10%);
             }

@@ -10,6 +10,22 @@ export class ProjectsService {
   private projectCards: ProjectCard[] = [
 
     new ProjectCard(
+      `Poker`,
+      `Projet perso`,
+      `fezzzzzzzzzk, ze,mkneztmo lkertmjrelgk .`,
+      new Date('2024-08'),
+      `https://jf-blog.fr/wp-content/uploads/2021/11/Google-Chrome-Extensions.jpg`
+    ).withDevelopmentTime('Moins de 2 semaines')
+      .withGitLink('https://github.com/olivia-brg/Don-t_Trigger_Me')
+      .withFullDescription([
+        `L'objectif de ce projet était de travailler sur l'asynchrone, manipuler le DOM, et utiliser l'API chrome.`,
+        `L'idée m'est venu car nous étions submerger par les information sur les viols de Mazan au moment du lancement du projet. Nous avons donc souhaité faire une extension qui puisse protéger des internautes sensibles à certains sujets.`,
+        `Nous avons commencer en structurant le projet et avec un code existant, dont nous avons retro enginerer le fonctionnement. Une fois bien assimiler, nous nous sommes debarasser des feature dont nous n'avions pas besoin afin de garder les fonctions centrale à notre projet : la capacité de remplacer les mot d'une liste donnée sur la page active.`,
+        `Le principe se décompose en plusieurs élément. Le premier est de fournir la liste, qui pour le moment est coder en dur. Il fallait également que l'extension soit capable d'analyser tout le code HTML présent avec un craller. Grâce à ça, la troisième partie du programme allait remplacer dynamique les lettres des mots concordant avec sa "base de donnée" avec des astérisques.`,
+        `Pendant que mes collègues travaillaient sur la possibilité d'ajouter manuellement des mots, j'ai commencer à générer un JSON comportant différentes catégories et sous catégorie qui me servirait a ajouter des liste entière de mot et de leurs dérivés.`
+      ]),
+
+    new ProjectCard(
       `Don't Trigger Me`,
       `Projet en groupe`,
       `Extension chrome qui permet de censurer des pages par catégories (agression, viol etc), ou en y entrant nos propre "trigger words".`,

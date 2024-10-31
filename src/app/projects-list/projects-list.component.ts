@@ -30,38 +30,4 @@ export class ProjectsListComponent implements OnInit {
   ngOnInit(): void {
     this.projectCards = this.projectsService.getProjectCards();
   }
-
-  // Stacking cards code
-
-  // ngAfterViewInit(): void {
-  //   const cards = gsap.utils.toArray(".single-card") as HTMLElement[]; // select all .single-card elements
-
-  //   cards.forEach((card, index) => {
-  //     const tween = gsap.to(card, {
-  //       scrollTrigger: {
-  //         trigger: card,
-  //         start: () => `top top+=300`,
-  //         end: () => `top top+=150`,
-  //         scrub: false,
-  //         markers: true,
-  //         invalidateOnRefresh: true
-  //       },
-  //       ease: "power1.out",
-  //       scale: () => 1 - (cards.length - index) * 0.025
-  //     });
-
-  //     ScrollTrigger.create({
-  //       trigger: card,
-  //       start: "top top+=150",
-  //       pin: true,
-  //       anticipatePin: 1,
-  //       pinSpacing: false,
-  //       markers: false,
-  //       id: 'pin',
-  //       end: 'max',
-  //       invalidateOnRefresh: true,
-  //     });
-  //   });
-  // }
-  
 }

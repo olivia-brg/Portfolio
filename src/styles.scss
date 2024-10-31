@@ -53,8 +53,8 @@
         --card-hover-shadow: rgb(0, 0, 0) 7px 7px 25px, rgba(146, 146, 146, 0.8) -5px -5px 20px;
         --project-card-background-color: rgba(0, 0, 0, 0.15);
         --project-card-hover-background-color: rgba(0, 0, 0, 0.5);
-    }  
-    
+    }
+
     body {
         margin: 0;
         padding: 0;
@@ -116,7 +116,7 @@
             outline: none;
             border: none;
             border-radius: 100px;
-            
+
             color: var(--filling-color);
 
             transition: all .5s ease;
@@ -124,7 +124,7 @@
             &:active {
                 transform: translate(1px, 1px);
             }
-            
+
             &:hover:not([role=switch]) {
                 background-size: 350%;
                 cursor: pointer;
@@ -145,8 +145,15 @@
             transform: translateX(-50%);
             width: 100%;
             min-width: 1820px;
-            
+
             filter: blur(10px);
+        }
+
+        .linkedin {
+            background: url("../public/assets/images/logo/linkedin-240.png") no-repeat;
+            background-size: 50px;
+            background-position: 50% 50%;
+
         }
 
         .section {
@@ -175,13 +182,13 @@
                     img {
                         height: 440px;
                         width: 44vw;
-                        transition: box-shadow 0.5s ease; 
+                        transition: box-shadow 0.5s ease;
                     }
 
                     .preview-text {
                         top: 18%;
                         transform: translateX(39vw);
-                        transition: transform 0.3s ease; 
+                        transition: transform 0.3s ease;
                     }
 
                     &:hover {
@@ -190,7 +197,7 @@
                             transform: translate(40vw);
                         }
 
-                        img{
+                        img {
                             box-shadow: var(--card-shadow);
                         }
                     }
@@ -211,8 +218,8 @@
                     .preview-text {
                         text-align: right;
                         top: 70%;
-                        right: 30vw; // transform: translateX(-15vw);
-                        transition: transform 0.3s ease; 
+                        right: 30vw;
+                        transition: transform 0.3s ease;
                     }
 
                     &:hover {
@@ -220,7 +227,7 @@
                             transform: translate(-1vw);
                         }
 
-                        img{
+                        img {
                             box-shadow: var(--card-shadow);
                         }
                     }
@@ -235,22 +242,22 @@
                     img {
                         height: 500px;
                         width: 42vw;
-                        transition: box-shadow 0.5s ease; 
+                        transition: box-shadow 0.5s ease;
                     }
 
                     .preview-text {
                         top: 18%;
                         transform: translateX(39vw);
-                        transition: transform 0.3s ease; 
+                        transition: transform 0.3s ease;
                     }
 
                     &:hover {
-                        
+
                         .preview-text {
                             transform: translate(40vw);
                         }
 
-                        img{
+                        img {
                             box-shadow: var(--card-shadow);
                         }
                     }
@@ -259,5 +266,13 @@
         }
     }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
