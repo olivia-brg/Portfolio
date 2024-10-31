@@ -16,10 +16,10 @@
         <label for="message">Message *</label><br>
         <textarea id="message" formControlName="message" rows="5" [ngClass]="{'error-input': emailForm.get('message')?.invalid && emailForm.get('message')?.touched}"></textarea><br>
         <div class="err" style="margin-bottom: 0;">
-            <small *ngIf="emailForm.get('message')?.invalid && emailForm.get('message')?.touched">Message requis</small>
+            <small *ngIf="emailForm.get('message')?.invalid && emailForm.get('message')?.touched">Veuillez entrer un message</small>
         </div>
 
-        <button type="submit" style="margin-right: 0;" [disabled]="emailForm.invalid">Envoyer</button>
+        <button type="submit" [disabled]="emailForm.invalid"><span class="button-text">Envoyer</span></button>
     </div>
 </form>
 <div *ngIf="submitStatus" [ngClass]="{'success': submitStatus === 'success', 'error': submitStatus === 'error'}">

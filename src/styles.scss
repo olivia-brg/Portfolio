@@ -37,6 +37,11 @@
         --card-hover-shadow: rgba(160, 160, 160, 1) 12px 12px 20px, rgba(255, 255, 255, .7) -10px -10px 20px;
         --project-card-background-color: rgba(255, 255, 255, 0.15);
         --project-card-hover-background-color: rgba(255, 255, 255, 0.4);
+
+        --at-icon: url("../public/assets/images/logo/light/at-icon-light.png");
+        --phone-icon: url("../public/assets/images/logo/light/phone-100-light.png");
+        --linkedin-icon: url("../public/assets/images/logo/light/linkedin-240-light.png");
+        --github-icon: url("../public/assets/images/logo/light/github-250-light.png");
     }
 
     .dark-mode {
@@ -53,6 +58,11 @@
         --card-hover-shadow: rgb(0, 0, 0) 7px 7px 25px, rgba(146, 146, 146, 0.8) -5px -5px 20px;
         --project-card-background-color: rgba(0, 0, 0, 0.15);
         --project-card-hover-background-color: rgba(0, 0, 0, 0.5);
+
+        --at-icon: url("../public/assets/images/logo/dark/at-icon-dark.png");
+        --phone-icon: url("../public/assets/images/logo/dark/phone-100-dark.png");
+        --linkedin-icon: url("../public/assets/images/logo/dark/linkedin-240-dark.png");
+        --github-icon: url("../public/assets/images/logo/dark/github-250-dark.png");
     }
 
     body {
@@ -99,36 +109,55 @@
         }
 
         button {
-            background-color: var(--font-color);
-            background-image: var(--text-background);
-            background-size: 300%;
-            background-position: 50%;
+            // background-color: var(--font-color);
+            // background-image: var(--text-background);
+            // background-size: 300%;
+            // background-position: 50%;
+
+            background-color: var(--filling-color);
+            border-style: solid;
+            border-width: 2px;
+            border-color: var(--font-color);
 
             box-sizing: border-box;
-            padding: 5px 10px;
-            margin-right: 20px;
+            padding-left: 2rem;
+            padding-right: 2rem;
             height: 3em;
             min-width: 150px;
 
-            font-size: 20px;
+            font-size: 1.2rem;
             font-weight: 500;
 
             outline: none;
-            border: none;
             border-radius: 100px;
 
-            color: var(--filling-color);
+            color: var(--font-color);
 
-            transition: all .5s ease;
+            transition: all 0.05s ease;
 
             &:active {
-                transform: translate(1px, 1px);
+                transform: translate(0, 5px);
+            }
+
+            &:not([role=switch]) {
+                // text-shadow: 0 0 5px var(--font-color);
+                transition: background-size 0.5s ease;
             }
 
             &:hover:not([role=switch]) {
                 background-size: 350%;
+                height: 3em;
                 cursor: pointer;
-                box-shadow: inset 10px 10px 15px rgba(39, 39, 39, 0.432), inset -10px -10px 15px rgba(228, 228, 228, 0.664);
+            }
+
+            .button-text {
+                display: inline-block;
+                transition: transform 0.5s ease;
+            }
+
+
+            &:hover .button-text {
+                transform: scale(1.1);
             }
         }
 
@@ -149,11 +178,28 @@
             filter: blur(10px);
         }
 
-        .linkedin {
-            background: url("../public/assets/images/logo/linkedin-240.png") no-repeat;
+        .email-icon {
+            background: var(--at-icon) no-repeat;
             background-size: 50px;
             background-position: 50% 50%;
+        }
 
+        .phone-icon {
+            background: var(--phone-icon) no-repeat;
+            background-size: 50px;
+            background-position: 50% 50%;
+        }
+
+        .linkedin-icon {
+            background: var(--linkedin-icon) no-repeat;
+            background-size: 50px;
+            background-position: 50% 50%;
+        }
+
+        .github-icon {
+            background: var(--github-icon) no-repeat;
+            background-size: 50px;
+            background-position: 50% 50%;
         }
 
         .section {
@@ -217,14 +263,14 @@
 
                     .preview-text {
                         text-align: right;
-                        top: 70%;
-                        right: 30vw;
+                        top: 60%;
+                        transform: translateX(-22vw);
                         transition: transform 0.3s ease;
                     }
 
                     &:hover {
                         .preview-text {
-                            transform: translate(-1vw);
+                            transform: translate(-23vw);
                         }
 
                         img {
@@ -270,9 +316,5 @@
 html,
 body {
     height: 100%;
-}
-
-body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }

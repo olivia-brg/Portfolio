@@ -28,8 +28,7 @@
                 background-color: var(--project-card-hover-background-color);
                 
                 cursor: pointer;
-                width: 71vw;
-                height: 610px;
+                transform: scale(1.02);
                 box-shadow: var(--card-hover-shadow);
                 width: calc(width + 10%);
             }

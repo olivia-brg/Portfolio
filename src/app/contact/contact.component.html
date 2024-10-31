@@ -9,10 +9,9 @@
         <app-form />
 
     <span id="contact-links">
-        <div class="icon" id="email"><a href="mailto:{{ contact.email }}"><img src="/assets/images/logo/at-icon.webp" alt="email icon">{{ contact.email }}</a></div>
-        
-        <div class="icon" id="phone"><a href="tel:+33{{ contact.phone }}"><img src="/assets/images/logo/phone-100.png" alt="phone icon">0{{ contact.phone }}</a></div>
-        <div class="icon"><a href="{{ contact.linkedin }}" target="_blank"><img class="linkedin" alt="linkedin logo">LinkedIn</a></div>
-        <div class="icon"><a href="{{ contact.github }}" target="_blank"><img src="/assets/images/logo/github-250.png" alt="github logo">GitHub</a></div>
+        <div class="icon"><a href="mailto:{{ contact.email }}" target="_blank"><span class="email-icon" alt="email logo"></span>{{ contact.email }}</a></div>
+        <div class="icon"><a href="tel:+33{{ contact.phone }}" target="_blank"><span class="phone-icon" alt="phone logo"></span>0{{ contact.phone }}</a></div>
+        <div class="icon"><a href="{{ contact.linkedin }}" target="_blank"><span class="linkedin-icon" alt="linkedin logo"></span>LinkedIn</a></div>
+        <div class="icon"><a href="{{ contact.github }}" target="_blank"><span class="github-icon" alt="github logo"></span>GitHub</a></div>
     </span>
 </div>

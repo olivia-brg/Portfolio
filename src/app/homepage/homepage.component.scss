@@ -19,11 +19,11 @@
         mask-repeat: no-repeat;
         mask-position: center;
 
-        /* Inverser le masque : utiliser le mode complémentaire (soustraction) */
+        // Inverser le masque : utiliser le mode complémentaire (soustraction)
         mask-composite: subtract;
-        /* Inverser l'effet pour que les parties noires apparaissent */
+        // Inverser l'effet pour que les parties noires apparaissent
         -webkit-mask-composite: subtract;
-        /* Support pour WebKit */
+        // Support pour WebKit
 
         transition: all 0.3s ease;
 
@@ -195,14 +195,14 @@
 
         button {
             position: relative;
-            height: 3em;
-            width: 12vw;
+            // height: 3em;
+            // width: 12vw;
             top: calc(var(--top-shift) + 60px);
             margin: 0 auto 300px auto;
 
-            border-radius: 100px;
+            // border-radius: 100px;
 
-            color: var(--filling-color)
+            // color: var(--filling-color)
         }
     }
 }

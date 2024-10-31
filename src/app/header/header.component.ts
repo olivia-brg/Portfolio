@@ -13,7 +13,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     MatSlideToggleModule
   ],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'] // Corrige le 'styleUrls' avec 's'
+  styleUrls: ['./header.component.scss']
 })
 
 export class HeaderComponent implements OnInit {
