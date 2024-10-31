@@ -214,6 +214,15 @@
                     position: absolute;
                     max-width: 25vw;
 
+                    padding: 1em;
+
+                    border: solid;
+                    border-width: 1px;
+
+                    background-color: var(--filling-color-transparent);
+
+                    border-radius: 30px;
+
                     p {
                         margin: 0;
                         font-size: 3em;
