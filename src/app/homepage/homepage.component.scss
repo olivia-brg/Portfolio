@@ -123,6 +123,8 @@
             align-self: center;
             align-items: center;
 
+            transition: transform 0.3s ease;
+
             .link-text {
                 position: relative;
             }
@@ -154,6 +156,9 @@
             }
 
             &:hover {
+
+                transform: scale(1.02);
+
                 .arrow {
 
                     --length: 0.4em;

@@ -237,7 +237,7 @@
                     img {
                         height: 440px;
                         width: 44vw;
-                        transition: box-shadow 0.5s ease;
+                        transition: all 0.5s ease;
                     }
 
                     .preview-text {
@@ -254,6 +254,7 @@
 
                         img {
                             box-shadow: var(--card-shadow);
+                            transform: scale(1.01);
                         }
                     }
                 }
@@ -266,7 +267,7 @@
                     img {
                         height: 650px;
                         width: 31.5vw;
-                        transition: box-shadow 0.5s ease;
+                        transition: all 0.5s ease;
                     }
 
 
@@ -284,6 +285,7 @@
 
                         img {
                             box-shadow: var(--card-shadow);
+                            transform: scale(1.01);
                         }
                     }
                 }
@@ -297,7 +299,7 @@
                     img {
                         height: 500px;
                         width: 42vw;
-                        transition: box-shadow 0.5s ease;
+                        transition: all 0.5s ease;
                     }
 
                     .preview-text {
@@ -314,6 +316,7 @@
 
                         img {
                             box-shadow: var(--card-shadow);
+                            transform: scale(1.01);
                         }
                     }
                 }
