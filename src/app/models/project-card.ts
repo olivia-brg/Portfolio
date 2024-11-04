@@ -8,7 +8,7 @@ export class ProjectCard {
     constructor (
         public title: string,
         public context: string,
-        public description: string,
+        public description: string[],
         public createdAt: Date,
         public imagePath: string
     ) {

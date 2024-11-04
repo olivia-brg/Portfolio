@@ -133,19 +133,19 @@
 
             color: var(--font-color);
 
-            transition: all 0.05s ease;
+            transition: transform 1s ease;
 
             &:active {
-                transform: translate(0, 5px);
+                transform: scale(0.97);
+                border-color: rgb(17, 92, 255);
+                color: rgb(17, 92, 255);
             }
 
             &:not([role=switch]) {
-                // text-shadow: 0 0 5px var(--font-color);
                 transition: background-size 0.5s ease;
             }
 
             &:hover:not([role=switch]) {
-                background-size: 350%;
                 height: 3em;
                 cursor: pointer;
             }
@@ -158,6 +158,10 @@
 
             &:hover .button-text {
                 transform: scale(1.1);
+            }
+            
+            &:active .button-text {
+                transform: scale(1.0);
             }
         }
 
@@ -178,29 +182,6 @@
             filter: blur(10px);
         }
 
-        .email-icon {
-            background: var(--at-icon) no-repeat;
-            background-size: 50px;
-            background-position: 50% 50%;
-        }
-
-        .phone-icon {
-            background: var(--phone-icon) no-repeat;
-            background-size: 50px;
-            background-position: 50% 50%;
-        }
-
-        .linkedin-icon {
-            background: var(--linkedin-icon) no-repeat;
-            background-size: 50px;
-            background-position: 50% 50%;
-        }
-
-        .github-icon {
-            background: var(--github-icon) no-repeat;
-            background-size: 50px;
-            background-position: 50% 50%;
-        }
 
         .section {
 
@@ -264,6 +245,9 @@
                     left: 60vw;
                     top: 120px;
 
+                    display: flex;
+                    justify-content: flex-end;
+
                     img {
                         height: 650px;
                         width: 31.5vw;
@@ -274,13 +258,13 @@
                     .preview-text {
                         text-align: right;
                         top: 60%;
-                        transform: translateX(-22vw);
+                        transform: translateX(-28vw);
                         transition: transform 0.3s ease;
                     }
 
                     &:hover {
                         .preview-text {
-                            transform: translate(-23vw);
+                            transform: translate(-29vw);
                         }
 
                         img {

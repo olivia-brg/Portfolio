@@ -3,16 +3,16 @@
     <a routerLink="/projects">Back</a>
     <p>{{ projectCard.context }}</p>
     @if (projectCard.developmentTime) {
-    <p>Development time : {{ projectCard.developmentTime | lowercase }}</p>
+    <p>Temps de développement : {{ projectCard.developmentTime | lowercase }}</p>
     }
     <img [src]="projectCard.imagePath" [alt]="projectCard.title">
-    <p>{{ projectCard.description }}</p>
+
     @if (projectCard.fullDescription) {
-    @for (paragraphs of projectCard.description; track $index) {
-    <section class="project-paragraph">
-        <p>{{ projectCard.fullDescription[$index]}}</p>
-    </section>
-    }
+        @for (paragraphs of projectCard.fullDescription; track $index) {
+        <section class="project-paragraph">
+            <p>{{ paragraphs }}</p>
+        </section>
+        }
     }
     @if (projectCard.gitLink) {
     <a [href]="projectCard.gitLink">Git</a>

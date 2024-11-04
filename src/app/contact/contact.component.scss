@@ -64,4 +64,29 @@
     app-form {
         position: relative;
     }
+
+    .email-icon {
+        background: var(--at-icon) no-repeat;
+        background-size: 50px;
+        background-position: 50% 50%;
+    }
+
+    .phone-icon {
+        background: var(--phone-icon) no-repeat;
+        background-size: 50px;
+        background-position: 50% 50%;
+    }
+
+    .linkedin-icon {
+        background: var(--linkedin-icon) no-repeat;
+        background-size: 50px;
+        background-position: 50% 50%;
+    }
+
+    .github-icon {
+        background: var(--github-icon) no-repeat;
+        background-size: 50px;
+        background-position: 50% 50%;
+    }
+
 }

@@ -28,7 +28,7 @@
             <app-project-preview [projectPreview]="projectCard" class="card" [id]="'project-preview-' + $index" />
             }
         </div>
-        <a [routerLink]="['/projects']" class="project-link">
+        <a routerLink='/projects' routerLinkActive="active" class="project-link">
             <span class="link-text">Plus de projets</span>
             <span class="arrows-container">
                 <span class="arrow" id="arrow1">></span>

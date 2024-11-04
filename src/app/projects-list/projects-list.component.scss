@@ -3,41 +3,6 @@
     justify-content: center;
 
     .cards {
-
         margin-top: 200px;
-
-        .single-card {
-            margin-bottom: 50px;
-            margin-left: auto;
-            margin-right: auto;
-
-            border: solid;
-            border-width: 1px;
-
-            background-color: var(--project-card-background-color);
-            box-shadow: var(--card-shadow);
-
-            border-radius: 30px;
-
-            width: 70vw;
-            height: 600px;
-            transition: all 0.5s ease;
-
-            &:hover {
-                background-color: var(--project-card-hover-background-color);
-                
-                cursor: pointer;
-                transform: scale(1.02);
-                box-shadow: var(--card-hover-shadow);
-                width: calc(width + 10%);
-            }
-
-            .project-card {
-                box-sizing: border-box;
-                width: 50%;
-                margin: 20px auto;
-                padding: 10px 30px;
-            }
-        }
     }
 }
