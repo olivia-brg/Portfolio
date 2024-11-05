@@ -1,8 +1,6 @@
 import { SlicePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { AboutComponent } from "../about/about.component";
 import { ContactComponent } from "../contact/contact.component";
 import { FormComponent } from "../form/form.component";
@@ -12,7 +10,6 @@ import { ProjectCardComponent } from '../project-card/project-card.component';
 import { ProjectPreviewComponent } from "../project-preview/project-preview.component";
 import { ContactService } from '../services/contact.service';
 import { ProjectsService } from '../services/projects.service';
-gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-homepage',
@@ -48,33 +45,5 @@ export class HomepageComponent implements OnInit {
   onContactClick() {
     this.router.navigateByUrl('contact');
   }
-  
-  // ngAfterViewInit() {
-  //     this.initializeScrollTriggers();
 
-  // }
-
-  // private initializeScrollTriggers() {
-  //   this.createScrollTrigger("#about");
-  //   this.createScrollTrigger("#projects");
-  //   this.createScrollTrigger("#contact");
-  // }
-
-  // private createScrollTrigger(triggerSelector: string) {
-  //   if (this.router.url === '/home') { // Ajoute cette vérification ici
-  //     gsap.to('.section', 
-  //       {
-  //       scrollTrigger: {
-  //         trigger: triggerSelector, // L'élément qui déclenche l'animation
-  //         start: "top bottom",      // Démarre quand le haut de l'élément atteint le bas de la fenêtre
-  //         end: "top top",           // Se termine quand le haut de l'élément atteint le haut de la fenêtre
-  //         scrub: 1,                 // Suivi de l'animation avec le défilement
-  //         snap: {
-  //           snapTo: 1,              // Snap à 1
-  //           duration: 1.5           // Durée du snap
-  //         }
-  //       },
-  //     });
-  //   }
-  // }
 }

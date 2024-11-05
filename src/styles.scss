@@ -26,7 +26,6 @@
     .light-mode {
         --text-background: url("../public/assets/images/abstract-holographic-gradient-1-copy2.jpg");
 
-        --text-box-color: rgb(13, 13, 15);
         --filling-color: rgb(230, 230, 230);
         --filling-color-transparent: rgba(245, 245, 245, 0.706);
         --font-color: rgb(13, 13, 13);
@@ -47,7 +46,6 @@
     .dark-mode {
         --text-background: url("../public/assets/images/holo2.png");
 
-        --text-box-color: rgb(245, 245, 245);
         --filling-color: rgb(13, 13, 15);
         --filling-color-transparent: rgba(13, 13, 15, 0.827);
         --font-color: rgb(216, 216, 216);
@@ -109,10 +107,6 @@
         }
 
         button {
-            // background-color: var(--font-color);
-            // background-image: var(--text-background);
-            // background-size: 300%;
-            // background-position: 50%;
 
             background-color: var(--filling-color);
             border-style: solid;
@@ -138,9 +132,9 @@
             }
             
             &:active:not([role=switch]) {
-                transform: scale(0.9);
-                border-color: rgb(17, 92, 255);
-                color: rgb(17, 92, 255);
+                transform: scale(0.95);
+                border-color: rgb(133, 133, 133);
+                color: rgb(133, 133, 133);
             }
 
             &:hover:not([role=switch]) {
@@ -172,6 +166,7 @@
             opacity: var(--background-opacity);
             position: fixed;
             left: 50%;
+            top: 0;
             transform: translateX(-50%);
             width: 100%;
             min-width: 1820px;

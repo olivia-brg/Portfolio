@@ -1,21 +1,28 @@
-<div>
-    <h2>{{ projectCard.title | uppercase }}</h2>
-    <a routerLink="/projects">Back</a>
-    <p>{{ projectCard.context }}</p>
-    @if (projectCard.developmentTime) {
-    <p>Temps de développement : {{ projectCard.developmentTime | lowercase }}</p>
-    }
-    <img [src]="projectCard.imagePath" [alt]="projectCard.title">
-
-    @if (projectCard.fullDescription) {
-        @for (paragraphs of projectCard.fullDescription; track $index) {
-        <section class="project-paragraph" [id]="projectCard.title + '-' + $index">
-            <p>{{ paragraphs }}</p>
-        </section>
+<img src="/assets/images/background.png" class="background-img">
+@if (this.router.url === '/projects/' + this.route.snapshot.params['id']) {
+    
+    <div class="project">
+        <h2>{{ projectCard.title | uppercase }}</h2>
+        <p>{{ projectCard.context }}</p>
+        
+        @if (projectCard.developmentTime) {
+        <p>Temps de développement : {{ projectCard.developmentTime | lowercase }}</p>
         }
-    }
-    @if (projectCard.gitLink) {
-    <a [href]="projectCard.gitLink">Git</a>
-    }
-    <p>Développer en {{ projectCard.createdAt | date: 'MMMM yyyy' | lowercase}}</p>
-</div>
+        <img [src]="projectCard.imagePath" [alt]="projectCard.title">
+    
+        @if (projectCard.fullDescription) {
+            @for (paragraphs of projectCard.fullDescription; track $index) {
+            <section class="project-paragraph" [id]="projectCard.title + '-' + $index">
+                <p>{{ paragraphs }}</p>
+            </section>
+            }
+        }
+        @if (projectCard.gitLink) {
+        <a [href]="projectCard.gitLink">Git</a>
+        }
+        <p>Développer en {{ projectCard.createdAt | date: 'MMMM yyyy' | lowercase}}</p>
+        
+        <button (click)="onProjectsListClick()"><span class="button-text">Tous les projets</span></button>
+        <button (click)="onHomepageClick()"><span class="button-text">Retour à l'accueil</span></button>
+    </div>
+}

@@ -1,18 +1,18 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProjectCard } from '../models/project-card';
 import { ProjectCardComponent } from "../project-card/project-card.component";
 import { ProjectsService } from '../services/projects.service';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { CommonModule } from '@angular/common';
+import { SingleProjectCardComponent } from "../single-project-card/single-project-card.component";
 
 @Component({
   selector: 'app-projects-list',
   standalone: true,
   imports: [
     ProjectCardComponent,
-    CommonModule
-  ],
+    CommonModule,
+    SingleProjectCardComponent
+],
   templateUrl: './projects-list.component.html',
   styleUrl: './projects-list.component.scss'
 })
@@ -23,9 +23,7 @@ export class ProjectsListComponent implements OnInit {
 
   constructor(
     private projectsService: ProjectsService,
-  ) {
-    gsap.registerPlugin(ScrollTrigger);
-  }
+  ) {}
 
   ngOnInit(): void {
     this.projectCards = this.projectsService.getProjectCards();

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectCard } from '../models/project-card';
 import { DatePipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ProjectCard } from '../models/project-card';
 import { ProjectsService } from '../services/projects.service';
 
 @Component({
@@ -19,11 +19,15 @@ import { ProjectsService } from '../services/projects.service';
 
 export class SingleProjectCardComponent implements OnInit {
 
+  @Input() projectPreview!: ProjectCard;
+
   projectCard!: ProjectCard;
+  projectCards!: ProjectCard[];
 
   constructor(
-    private route: ActivatedRoute,
+    public route: ActivatedRoute,
     private projectsService: ProjectsService,
+    public router: Router,
   ) {};
 
   ngOnInit(): void {
@@ -34,5 +38,13 @@ export class SingleProjectCardComponent implements OnInit {
   private getProject() {
     const projectId = this.route.snapshot.params['id'];
     this.projectCard = this.projectsService.getProjectCardById(projectId);
+  }
+
+  onProjectsListClick() {
+    this.router.navigateByUrl('projects');
+  }
+
+  onHomepageClick() {
+    this.router.navigateByUrl('home');
   }
 }
