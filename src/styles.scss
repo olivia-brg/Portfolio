@@ -50,7 +50,7 @@
         --text-box-color: rgb(245, 245, 245);
         --filling-color: rgb(13, 13, 15);
         --filling-color-transparent: rgba(13, 13, 15, 0.827);
-        --font-color: rgb(194, 194, 194);
+        --font-color: rgb(216, 216, 216);
 
         --background-opacity: 0.3;
 
@@ -132,17 +132,15 @@
             border-radius: 100px;
 
             color: var(--font-color);
-
-            transition: transform 1s ease;
-
-            &:active {
-                transform: scale(0.97);
+            
+            &:not([role=switch]) {
+                transition: all 0.05s ease;
+            }
+            
+            &:active:not([role=switch]) {
+                transform: scale(0.9);
                 border-color: rgb(17, 92, 255);
                 color: rgb(17, 92, 255);
-            }
-
-            &:not([role=switch]) {
-                transition: background-size 0.5s ease;
             }
 
             &:hover:not([role=switch]) {
@@ -152,16 +150,15 @@
 
             .button-text {
                 display: inline-block;
-                transition: transform 0.5s ease;
             }
-
 
             &:hover .button-text {
                 transform: scale(1.1);
             }
             
             &:active .button-text {
-                transform: scale(1.0);
+                transform: scale(.9);
+                font-size: 1.4rem;
             }
         }
 

@@ -9,7 +9,7 @@
 
     @if (projectCard.fullDescription) {
         @for (paragraphs of projectCard.fullDescription; track $index) {
-        <section class="project-paragraph">
+        <section class="project-paragraph" [id]="projectCard.title + '-' + $index">
             <p>{{ paragraphs }}</p>
         </section>
         }

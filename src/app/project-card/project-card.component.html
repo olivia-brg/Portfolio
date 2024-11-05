@@ -1,9 +1,9 @@
 <div class="card" (click)="onViewProject()">
         <h2>{{ projectCard.title | uppercase }}</h2>
+        <span class="description-text">
+                @for (paragraphs of projectCard.description; track $index) {
+                        <p>{{ paragraphs }}</p>
+                }
+        </span>
         <img [src]="projectCard.imagePath" [alt]="projectCard.title"><br>
-        @for (paragraphs of projectCard.description; track $index) {
-                <section class="project-description" [id]="projectCard.title + '-' + $index">
-                    <p>{{ paragraphs }}</p>
-                </section>
-            }
 </div>
