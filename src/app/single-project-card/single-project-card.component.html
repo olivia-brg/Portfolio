@@ -10,13 +10,19 @@
         }
         <img [src]="projectCard.imagePath" [alt]="projectCard.title">
     
-        @if (projectCard.fullDescription) {
-            @for (paragraphs of projectCard.fullDescription; track $index) {
-            <section class="project-paragraph" [id]="projectCard.title + '-' + $index">
-                <p>{{ paragraphs }}</p>
+        @if (projectCard.fullDescription) {  
+            <section *ngFor="let paragraph of projectCard.fullDescription; let i = index" class="project-paragraph" [id]="i + 1">
+                <p>{{ paragraph }}</p>
+
+                @for (image of projectCard.otherImages; track image.path) {
+                    @if (image.index == i) {
+                        <img [src]="image.path">
+                    }
+                }
+                
             </section>
-            }
         }
+
         @if (projectCard.gitLink) {
         <a [href]="projectCard.gitLink">Git</a>
         }

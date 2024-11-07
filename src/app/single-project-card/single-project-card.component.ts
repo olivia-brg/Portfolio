@@ -1,4 +1,4 @@
-import { DatePipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
+import { DatePipe, LowerCasePipe, NgFor, UpperCasePipe } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ProjectCard } from '../models/project-card';
@@ -11,7 +11,8 @@ import { ProjectsService } from '../services/projects.service';
     UpperCasePipe,
     LowerCasePipe,
     DatePipe,
-    RouterLink
+    RouterLink,
+    NgFor
   ],
   templateUrl: './single-project-card.component.html',
   styleUrl: './single-project-card.component.scss'
@@ -23,6 +24,7 @@ export class SingleProjectCardComponent implements OnInit {
 
   projectCard!: ProjectCard;
   projectCards!: ProjectCard[];
+  index: number = 0;
 
   constructor(
     public route: ActivatedRoute,

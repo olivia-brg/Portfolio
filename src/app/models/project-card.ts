@@ -3,6 +3,7 @@ export class ProjectCard {
     developmentTime?: string;
     fullDescription?: string[];
     gitLink?: string;
+    otherImages: {path: string, index: number}[] = [];
     id: string;
 
     constructor (
@@ -39,6 +40,15 @@ export class ProjectCard {
     
     withGitLink(gitLink: string): ProjectCard {
         this.setGitLink(gitLink);
+        return this;
+    }
+
+    setOtherImagesPath(imagePath: string, index: number ): void {
+        this.otherImages = [...this.otherImages, {path: imagePath, index: index}];
+    }
+    
+    withOtherImagesPath(imagesPath: string, index: number): ProjectCard {
+        this.setOtherImagesPath(imagesPath, index);
         return this;
     }
 }

@@ -1,16 +1,73 @@
 .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  img {
-    width: 50%;
-  }
-  
   h2 {
     margin-top: 100px;
     margin-bottom: 0;
   }
-  
+
   p {
     font-weight: 300;
     font-size: 16px;
+  }
+
+  img {
+    width: 50%;
+  }
+
+  .project-paragraph {
+    background-color: var(--project-card-hover-background-color);
+    display: flex;
+    align-self: stretch;
+
+
+    $max-id: 100;
+
+    @for $i from 1 through $max-id {
+
+      @if $i % 3==1 {
+        &[id="#{$i}"] {
+          --img-width: 25%;
+
+          p {
+            width: calc(100% - var(--img-width));
+          }
+
+          img {
+            width: var(--img-width);
+          }
+        }
+      }
+
+      @if $i % 3==2 {
+        &[id="#{$i}"] {
+          --img-width: 25%;
+
+          p {
+            width: calc(100% - var(--img-width));
+          }
+
+          img {
+            width: var(--img-width);
+          }
+        }
+      }
+
+      @if $i % 3==0 {
+        &[id="#{$i}"] {
+          --img-width: 25%;
+
+          p {
+            width: calc(100% - var(--img-width));
+          }
+
+          img {
+            width: var(--img-width);
+          }
+        }
+      }
+    }
   }
 }

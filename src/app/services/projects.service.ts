@@ -81,7 +81,10 @@ export class ProjectsService {
       .withFullDescription([`L'objectif de ce projet était de nous faire utilser les concepts fondamentaux de la programmation (boucles, conditions, variables) et d'appréhender des concepts plus poussé (physique d'un jeu, architeture)...`,
         `Nous avons aussi du apprendre a gérer un projet en groupe, ce qui nous a demandé un temps d'adaptation car c'était une première de travailler à plusieurs sur un même code. Nous avons du réfléchir à comment on pouvait travailler sur différents pc et comment nous devions unifier notre travail (puisque qu'étant notre premier projet nous ne maitrisions absolument pas git), et nous avons aussi dû apprendre à communiquer éfficacement.`,
       `Pour la partie plus technique`])
-      .withGitLink('https://github.com/olivia-brg/Chat_grin'),
+      .withGitLink('https://github.com/olivia-brg/Chat_grin')
+      .withOtherImagesPath(
+        `./assets/images/test-chatgrin.jpg` , 2
+      ),
 
   ];
 
