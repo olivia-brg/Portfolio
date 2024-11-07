@@ -23,51 +23,51 @@
     align-self: stretch;
 
 
-    $max-id: 100;
+    // $max-id: 100;
 
-    @for $i from 1 through $max-id {
+    // @for $i from 1 through $max-id {
 
-      @if $i % 3==1 {
-        &[id="#{$i}"] {
-          --img-width: 25%;
+    //   @if $i % 3==1 {
+    //     &[id="#{$i}"] {
+    //       --img-width: 25%;
 
-          p {
-            width: calc(100% - var(--img-width));
-          }
+    //       p {
+    //         width: calc(100% - var(--img-width));
+    //       }
 
-          img {
-            width: var(--img-width);
-          }
-        }
-      }
+    //       img {
+    //         width: var(--img-width);
+    //       }
+    //     }
+    //   }
 
-      @if $i % 3==2 {
-        &[id="#{$i}"] {
-          --img-width: 25%;
+    //   @if $i % 3==2 {
+    //     &[id="#{$i}"] {
+    //       --img-width: 25%;
 
-          p {
-            width: calc(100% - var(--img-width));
-          }
+    //       p {
+    //         width: calc(100% - var(--img-width));
+    //       }
 
-          img {
-            width: var(--img-width);
-          }
-        }
-      }
+    //       img {
+    //         width: var(--img-width);
+    //       }
+    //     }
+    //   }
 
-      @if $i % 3==0 {
-        &[id="#{$i}"] {
-          --img-width: 25%;
+    //   @if $i % 3==0 {
+    //     &[id="#{$i}"] {
+    //       --img-width: 25%;
 
-          p {
-            width: calc(100% - var(--img-width));
-          }
+    //       p {
+    //         width: calc(100% - var(--img-width));
+    //       }
 
-          img {
-            width: var(--img-width);
-          }
-        }
-      }
-    }
+    //       img {
+    //         width: var(--img-width);
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
