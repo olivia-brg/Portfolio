@@ -15,7 +15,8 @@ export class ProjectsService {
       [`Création d'un projet fullstack (SpringBoot, Angular, Tailwind, MySQL)`],
       new Date('2024-10'),
       `https://jf-blog.fr/wp-content/uploads/2021/11/Google-Chrome-Extensions.jpg`
-    ).withGitLink('https://github.com/adatechschool/projet-collectif-reseau-social-php-olnaye-long')
+    ).withDevelopmentTime(`Environ 7 jours`)
+    .withGitLink('https://github.com/adatechschool/projet-collectif-reseau-social-php-olnaye-long')
       .withFullDescription([
         `Pour ce projet, nous avons décider d'utiliser des technos très communes a Nantes (java / angular). La première difficulté à été d'initialiser le projet`,
         ``
@@ -51,7 +52,7 @@ export class ProjectsService {
       [`Extension chrome qui permet de censurer des pages par catégories (agression, viol etc), ou en y entrant nos propre "trigger words".`],
       new Date('2024-08'),
       `https://jf-blog.fr/wp-content/uploads/2021/11/Google-Chrome-Extensions.jpg`
-    ).withDevelopmentTime('Moins de 2 semaines')
+    ).withDevelopmentTime('Environ 7 jours')
       .withGitLink('https://github.com/olivia-brg/Don-t_Trigger_Me')
       .withFullDescription([
         `L'objectif de ce projet était de travailler sur l'asynchrone, manipuler le DOM, et utiliser l'API chrome.`,
@@ -63,27 +64,33 @@ export class ProjectsService {
 
     new ProjectCard(
       `Dashboard`,
-      `Group project`,
-      [`A web dashboard project that was created to help us learn how to work with APIs. We integrated a news API to display the latest headlines, a map showing Bicloo bike stations that displays available bikes or parking spots, and NASA's image API to feature an awesome, daily-changing background that can also run as a slideshow. Additionally, we included an API that shows upcoming public holidays for quick reference.`],
+      `Projet en équipe`,
+      [`Projet de page web de type dashboard qui affiche des données dynamiquement, grâce à l'utilisation d'API. Nous y avons intégré un affichage de site de news, une carte de Bicloo, ainsi qu'une API de fond d'ecran provenant de la NASA. Nous y avons aussi ajouté une API pour afficher les jours férié.`],
       new Date('2024-07'),
-      `https://www.stockvault.net/data/2016/08/20/208059/preview16.jpg`
-    ).withDevelopmentTime('Less than 2 weeks')
-      .withGitLink('https://github.com/olivia-brg/Dashboard'),
+      `./assets/images/projects/dashboard/Dashboard-cover.jpg`
+    ).withDevelopmentTime('Environ 7 jours')
+      .withGitLink('https://github.com/olivia-brg/Dashboard')
+      .withFullDescription([
+        ``
+      ]),
 
     new ProjectCard(
       `Chat Grin`,
-      `Group project`,
+      `Projet d'école en équipe`,
       [`Jeu de plateforme codé en LUA sur 8`],
       new Date('2024-06'),
       `./assets/images/chatgrin.png`
     )
-      .withDevelopmentTime('Less than 2 weeks')
-      .withFullDescription([`L'objectif de ce projet était de nous faire utilser les concepts fondamentaux de la programmation (boucles, conditions, variables) et d'appréhender des concepts plus poussé (physique d'un jeu, architeture)...`,
-        `Nous avons aussi du apprendre a gérer un projet en groupe, ce qui nous a demandé un temps d'adaptation car c'était une première de travailler à plusieurs sur un même code. Nous avons du réfléchir à comment on pouvait travailler sur différents pc et comment nous devions unifier notre travail (puisque qu'étant notre premier projet nous ne maitrisions absolument pas git), et nous avons aussi dû apprendre à communiquer éfficacement.`,
-      `Pour la partie plus technique`])
+      .withDevelopmentTime('Environ 7 jours')
+      .withFullDescription([
+        `L'objectif de ce projet était de nous faire utilser les concepts fondamentaux de la programmation (boucles, conditions, variables) et d'appréhender des concepts plus poussé (physique d'un jeu, architeture)...`,
+        `Nous avons aussi du apprendre a gérer un projet en groupe, ce qui nous a demandé un temps d'adaptation car c'était une première de travailler à plusieurs sur un même code. Nous avons du réfléchir à comment on pouvait travailler sur différents pc et comment nous devions unifier notre travail (puisque qu'étant notre premier projet nous ne maitrisions absolument pas git). Nous avons également dû apprendre à communiquer éfficacement.`,
+        `Pour la partie plus technique : nous avons souhaité nous challenger. Nous avons préféré un jeu de plateforme à un jeu type "asteroid" ou autres jeu ayant une physique / déplacement plus limité. Ca nous a appris à pousser certain concept, comme le mouvement, l'animation, les collisions, etc et nous a donné des bonnes bases en algorythmie`,
+        `Malgrès le fait que ce soit le premier projet en équipe, et des difficulté d'adaptation sur les premiers jours, le projet s'est extremement bien passé et nous sommes fier du résultat que nous avons obtenu, avec le peu de connaissance que nous avions.`,
+    ])
       .withGitLink('https://github.com/olivia-brg/Chat_grin')
       .withOtherImagesPath(
-        `./assets/images/test-chatgrin.jpg` , 2
+        `./assets/images/test-chatgrin.jpg` , 0
       ),
 
   ];

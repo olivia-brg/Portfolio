@@ -12,9 +12,9 @@
     font-weight: 300;
     font-size: 16px;
   }
-
+  
   img {
-    width: 50%;
+
   }
 
   .project-paragraph {
@@ -23,12 +23,19 @@
     align-self: stretch;
 
 
-    $max-id: 100;
+    $max-id: 10;
 
     @for $i from 1 through $max-id {
 
       @if $i % 3==1 {
         &[id="#{$i}"] {
+          $projectCard: (
+            otherImages: 'some-value'
+          );
+
+        $otherImages: map-get($projectCard, otherImages);
+
+        @if $otherImages ==$i {
           --img-width: 25%;
 
           p {
@@ -39,35 +46,42 @@
             width: var(--img-width);
           }
         }
-      }
 
-      @if $i % 3==2 {
-        &[id="#{$i}"] {
-          --img-width: 25%;
-
+        @else {
           p {
-            width: calc(100% - var(--img-width));
-          }
-
-          img {
-            width: var(--img-width);
-          }
-        }
-      }
-
-      @if $i % 3==0 {
-        &[id="#{$i}"] {
-          --img-width: 25%;
-
-          p {
-            width: calc(100% - var(--img-width));
-          }
-
-          img {
-            width: var(--img-width);
+            width: 100%;
           }
         }
       }
     }
+
+    @if $i % 3==2 {
+      &[id="#{$i}"] {
+        --img-width: 25%;
+
+        p {
+          width: calc(100% - var(--img-width));
+        }
+
+        img {
+          width: var(--img-width);
+        }
+      }
+    }
+
+    @if $i % 3==0 {
+      &[id="#{$i}"] {
+        --img-width: 25%;
+
+        p {
+          width: calc(100% - var(--img-width));
+        }
+
+        img {
+          width: var(--img-width);
+        }
+      }
+    }
   }
+}
 }

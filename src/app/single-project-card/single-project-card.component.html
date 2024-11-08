@@ -2,13 +2,13 @@
 @if (this.router.url === '/projects/' + this.route.snapshot.params['id']) {
     
     <div class="project">
+        <img class="cover" [src]="projectCard.imagePath" [alt]="projectCard.title">
         <h2>{{ projectCard.title | uppercase }}</h2>
         <p>{{ projectCard.context }}</p>
         
         @if (projectCard.developmentTime) {
         <p>Temps de développement : {{ projectCard.developmentTime | lowercase }}</p>
         }
-        <img [src]="projectCard.imagePath" [alt]="projectCard.title">
     
         @if (projectCard.fullDescription) {  
             <section *ngFor="let paragraph of projectCard.fullDescription; let i = index" class="project-paragraph" [id]="i + 1">
