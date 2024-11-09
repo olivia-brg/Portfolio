@@ -19,16 +19,47 @@
         font-size: 1.75em;
     }
 
+    app-form {
+        position: relative;
+    }
+
     #contact-links {
 
         position: relative;
         top: 10px;
 
-        width: fit-content;
+        // max-width: max(40vw, 500px);
+
+        min-width: max(800px - 4vw);
+        width: 48vw;
 
         display: flex;
 
         z-index: 1;
+
+        .email-icon {
+            background: var(--at-icon) no-repeat;
+            background-size: 50px;
+            background-position: 50% 50%;
+        }
+
+        .phone-icon {
+            background: var(--phone-icon) no-repeat;
+            background-size: 50px;
+            background-position: 50% 50%;
+        }
+
+        .linkedin-icon {
+            background: var(--linkedin-icon) no-repeat;
+            background-size: 50px;
+            background-position: 50% 50%;
+        }
+
+        .github-icon {
+            background: var(--github-icon) no-repeat;
+            background-size: 50px;
+            background-position: 50% 50%;
+        }
 
         .icon {
             width: 250px;
@@ -42,7 +73,7 @@
                 position: relative;
                 transform: translateX(-50%);
                 left: 50%;
-                
+
                 text-decoration: none;
                 font: 'Galano';
                 color: var(--font-color);
@@ -60,33 +91,4 @@
             }
         }
     }
-
-    app-form {
-        position: relative;
-    }
-
-    .email-icon {
-        background: var(--at-icon) no-repeat;
-        background-size: 50px;
-        background-position: 50% 50%;
-    }
-
-    .phone-icon {
-        background: var(--phone-icon) no-repeat;
-        background-size: 50px;
-        background-position: 50% 50%;
-    }
-
-    .linkedin-icon {
-        background: var(--linkedin-icon) no-repeat;
-        background-size: 50px;
-        background-position: 50% 50%;
-    }
-
-    .github-icon {
-        background: var(--github-icon) no-repeat;
-        background-size: 50px;
-        background-position: 50% 50%;
-    }
-
 }

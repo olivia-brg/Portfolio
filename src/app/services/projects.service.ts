@@ -77,7 +77,7 @@ export class ProjectsService {
     new ProjectCard(
       `Chat Grin`,
       `Projet d'école en équipe`,
-      [`Jeu de plateforme codé en LUA sur 8`],
+      [`Jeu de plateforme codé en LUA sur PICO 8`],
       new Date('2024-06'),
       `./assets/images/chatgrin.png`
     )
@@ -86,7 +86,7 @@ export class ProjectsService {
         `L'objectif de ce projet était de nous faire utilser les concepts fondamentaux de la programmation (boucles, conditions, variables) et d'appréhender des concepts plus poussé (physique d'un jeu, architeture)...`,
         `Nous avons aussi du apprendre a gérer un projet en groupe, ce qui nous a demandé un temps d'adaptation car c'était une première de travailler à plusieurs sur un même code. Nous avons du réfléchir à comment on pouvait travailler sur différents pc et comment nous devions unifier notre travail (puisque qu'étant notre premier projet nous ne maitrisions absolument pas git). Nous avons également dû apprendre à communiquer éfficacement.`,
         `Pour la partie plus technique : nous avons souhaité nous challenger. Nous avons préféré un jeu de plateforme à un jeu type "asteroid" ou autres jeu ayant une physique / déplacement plus limité. Ca nous a appris à pousser certain concept, comme le mouvement, l'animation, les collisions, etc et nous a donné des bonnes bases en algorythmie`,
-        `Malgrès le fait que ce soit le premier projet en équipe, et des difficulté d'adaptation sur les premiers jours, le projet s'est extremement bien passé et nous sommes fier du résultat que nous avons obtenu, avec le peu de connaissance que nous avions.`,
+        `Malgrès le fait que ce soit le premier projet en équipe, et que nous ayons eu des difficulté d'adaptation sur les premiers jours, le projet s'est bien passé et nous sommes fier du résultat obtenu, notemment avec le peu de connaissance que nous avions.`,
     ])
       .withGitLink('https://github.com/olivia-brg/Chat_grin')
       .withOtherImagesPath(

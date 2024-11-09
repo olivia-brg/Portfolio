@@ -2,7 +2,8 @@
 @if (this.router.url === '/projects/' + this.route.snapshot.params['id']) {
     
     <div class="project">
-        <img class="cover" [src]="projectCard.imagePath" [alt]="projectCard.title">
+        <!-- <img id="cover" [src]="projectCard.imagePath" [alt]="projectCard.title"> -->
+        <div id="cover" [style.backgroundImage]="'url(' + projectCard.imagePath + ')'"></div>
         <h2>{{ projectCard.title | uppercase }}</h2>
         <p>{{ projectCard.context }}</p>
         
