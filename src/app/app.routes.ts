@@ -3,10 +3,10 @@ import { ContactComponent } from './contact/contact.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ProjectsListComponent } from './projects-list/projects-list.component';
-import { SingleProjectCardComponent } from './single-project-card/single-project-card.component';
+import { ProjectPageComponent } from './project-page/project-page.component';
 
 export const routes: Routes = [
-    { path: 'projects/:id', component: SingleProjectCardComponent },
+    { path: 'projects/:id', component: ProjectPageComponent },
     { path: '', component: LandingPageComponent },
     { path: 'home', component: HomepageComponent },
     { path: 'projects', component: ProjectsListComponent },

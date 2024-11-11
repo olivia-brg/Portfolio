@@ -1,12 +1,10 @@
 import { SlicePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { AboutComponent } from "../about/about.component";
-import { ContactComponent } from "../contact/contact.component";
 import { FormComponent } from "../form/form.component";
 import { Contact } from '../models/contact';
 import { ProjectCard } from '../models/project-card';
-import { ProjectCardComponent } from '../project-card/project-card.component';
 import { ProjectPreviewComponent } from "../project-preview/project-preview.component";
 import { ContactService } from '../services/contact.service';
 import { ProjectsService } from '../services/projects.service';
@@ -15,11 +13,8 @@ import { ProjectsService } from '../services/projects.service';
   selector: 'app-homepage',
   standalone: true,
   imports: [
-    ProjectCardComponent,
-    ContactComponent,
     FormComponent,
     SlicePipe,
-    RouterLink,
     ProjectPreviewComponent,
     AboutComponent,
   ],
