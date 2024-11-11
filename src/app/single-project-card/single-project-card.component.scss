@@ -3,25 +3,26 @@
   flex-direction: column;
   align-items: center;
 
+  #cover {
+    width: 100%;
+    height: 600px;
+
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // filter: blur(5px);
+  }
+
   h2 {
     margin-top: 100px;
     margin-bottom: 0;
   }
 
-  p {
+  p:not(.project-paragraph) {
     font-weight: 300;
     font-size: 16px;
-  }
-
-  #cover {
-    width: 100%;
-    height: 600px;
-    
-    object-fit: cover;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat
+    // background-color: red;
   }
 
   .project-paragraph {
@@ -64,6 +65,13 @@
 
     @if $i % 3==2 {
       &[id="#{$i}"] {
+        $projectCard: (
+          otherImages: 'some-value'
+        );
+
+      $otherImages: map-get($projectCard, otherImages);
+
+      @if $otherImages ==$i {
         --img-width: 25%;
 
         p {
@@ -74,21 +82,42 @@
           width: var(--img-width);
         }
       }
-    }
 
-    @if $i % 3==0 {
-      &[id="#{$i}"] {
-        --img-width: 25%;
-
+      @else {
         p {
-          width: calc(100% - var(--img-width));
-        }
-
-        img {
-          width: var(--img-width);
+          width: 100%;
         }
       }
     }
   }
+
+  @if $i % 3==0 {
+    &[id="#{$i}"] {
+      $projectCard: (
+        otherImages: 'some-value'
+      );
+
+    $otherImages: map-get($projectCard, otherImages);
+
+    @if $otherImages ==$i {
+      --img-width: 25%;
+
+      p {
+        width: calc(100% - var(--img-width));
+      }
+
+      img {
+        width: var(--img-width);
+      }
+    }
+
+    @else {
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+}
 }
 }

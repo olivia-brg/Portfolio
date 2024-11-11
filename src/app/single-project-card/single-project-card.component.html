@@ -4,6 +4,7 @@
     <div class="project">
         <!-- <img id="cover" [src]="projectCard.imagePath" [alt]="projectCard.title"> -->
         <div id="cover" [style.backgroundImage]="'url(' + projectCard.imagePath + ')'"></div>
+        <!-- <img src="/assets/images/background.png" id="img-gradient"> -->
         <h2>{{ projectCard.title | uppercase }}</h2>
         <p>{{ projectCard.context }}</p>
         
@@ -13,7 +14,7 @@
     
         @if (projectCard.fullDescription) {  
             <section *ngFor="let paragraph of projectCard.fullDescription; let i = index" class="project-paragraph" [id]="i + 1">
-                <p>{{ paragraph }}</p>
+                <p class="project-paragraph">{{ paragraph }}</p>
 
                 @for (image of projectCard.otherImages; track image.path) {
                     @if (image.index == i) {
