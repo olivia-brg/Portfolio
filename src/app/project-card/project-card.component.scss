@@ -21,32 +21,57 @@
 
   transition: all 0.4s ease;
 
+  &::before {
+    z-index: -1;
+
+    position: absolute;
+
+    content: "";
+    background: radial-gradient(rgba(255, 255, 255, 0.315), transparent, transparent);
+    width: 1200px;
+    height: 1200px;
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+
+    transition: 0.5s;
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+
+
   &:hover {
     background-color: var(--project-card-hover-background-color);
 
     cursor: pointer;
     transform: scale(1.02);
     box-shadow: var(--card-hover-shadow);
+
+
   }
 
-  h2 {
-    margin-bottom: 0;
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 1;
-  }
-
-  .description-text {
-    
+  .card-title {
     margin-right: 3vw;
-    font-weight: 300;
-    font-size: 16px;
-    grid-row: 2 / span 1;
-    grid-column: 1 / span 1;
+
+    h2 {
+      margin-bottom: 0;
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 1;
+    }
+
+    .description-text {
+
+      font-weight: 300;
+      font-size: 16px;
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 1;
+    }
   }
 
   img {
     width: 110%;
-    height: 115%;
+    height: 116%;
     object-fit: cover;
     object-position: 50% 50%;
 
@@ -59,7 +84,7 @@
     display: flex;
     align-self: flex-start;
 
-    overflow: visible;
+    overflow: hidden;
 
   }
 }

@@ -10,4 +10,29 @@ img {
 
 *:hover {
     cursor: pointer;
-};
+}
+
+.preview-text {
+
+    overflow: hidden;
+
+    &::before {
+        z-index: -1;
+
+        position: absolute;
+
+        content: "";
+        background: radial-gradient(rgba(255, 255, 255, 0.151), transparent, transparent);
+        width: 600px;
+        height: 600px;
+        transform: translate(-50%, -50%);
+
+        opacity: 0;
+
+        transition: 0.5s;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
