@@ -41,5 +41,4 @@ export class HomepageComponent implements OnInit {
   onContactClick() {
     this.router.navigateByUrl('contact');
   }
-
 }
