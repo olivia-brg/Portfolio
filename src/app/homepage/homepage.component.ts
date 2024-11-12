@@ -1,6 +1,6 @@
 import { SlicePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AboutComponent } from "../about/about.component";
 import { FormComponent } from "../form/form.component";
 import { Contact } from '../models/contact';
@@ -17,6 +17,7 @@ import { ProjectsService } from '../services/projects.service';
     SlicePipe,
     ProjectPreviewComponent,
     AboutComponent,
+    RouterLink
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
