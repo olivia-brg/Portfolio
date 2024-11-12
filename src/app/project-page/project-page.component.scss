@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
 
-  #cover {
+  .cover {
+    position: relative;
     width: 100%;
     height: 600px;
 
@@ -12,8 +13,15 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    // filter: blur(5px);
+    &.second {
+      z-index: -1;
+      height: 602px;
+      position: absolute;
+      top: 0;
+      filter: blur(15px);
+    }
   }
+
 
   h2 {
     margin-top: 100px;
@@ -31,20 +39,13 @@
     display: flex;
     align-self: stretch;
 
-
     $max-id: 10;
-
     @for $i from 1 through $max-id {
 
       @if $i % 3==1 {
         &[id="#{$i}"] {
-          $projectCard: (
-            otherImages: 'some-value'
-          );
 
-          $otherImages: map-get($projectCard, otherImages);
-
-          @if $otherImages ==$i {
+          &:has(img) {
             --img-width: 25%;
 
             p {
@@ -56,7 +57,7 @@
             }
           }
 
-          @else {
+          &:not(:has(img)) {
             p {
               width: 100%;
             }
@@ -66,13 +67,8 @@
 
       @if $i % 3==2 {
         &[id="#{$i}"] {
-          $projectCard: (
-            otherImages: 'some-value'
-          );
 
-          $otherImages: map-get($projectCard, otherImages);
-
-          @if $otherImages ==$i {
+          &:has(img) {
             --img-width: 25%;
 
             p {
@@ -84,7 +80,7 @@
             }
           }
 
-          @else {
+          &:not(:has(img)) {
             p {
               width: 100%;
             }
@@ -94,13 +90,8 @@
 
       @if $i % 3==0 {
         &[id="#{$i}"] {
-          $projectCard: (
-            otherImages: 'some-value'
-          );
 
-          $otherImages: map-get($projectCard, otherImages);
-
-          @if $otherImages ==$i {
+          &:has(img) {
             --img-width: 25%;
 
             p {
@@ -112,7 +103,7 @@
             }
           }
 
-          @else {
+          &:not(:has(img)) {
             p {
               width: 100%;
             }
