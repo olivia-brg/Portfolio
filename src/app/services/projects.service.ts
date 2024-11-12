@@ -18,8 +18,8 @@ export class ProjectsService {
     ).withDevelopmentTime(`Environ 7 jours`)
     .withGitLink('https://github.com/adatechschool/projet-collectif-reseau-social-php-olnaye-long')
       .withFullDescription([
-        `Pour ce projet, nous avons décider d'utiliser des technos très communes a Nantes (java / angular). La première difficulté à été d'initialiser le projet`,
-        ``
+        `Pour ce projet, nous avons décider d'utiliser des technos très communes a Nantes (java / angular). N'ayant jamais fait de back si ce n'est un peu de PHP auparavant, l'initiation du projet était une vraie difficulté. Nous avons également du faire face a une seconde difficulté plus importante qui a été le comportement toxique d'une collègue, qui a ralenti le projet durant plus de la moitié du temps imparti. Nous avons fais de notre mieux pour gérer la situation, puis avons du malheureusement, et d'un commun accord, mettre fin a la collaboration avec cette personne. Une fois cette phase derriere nous, nous avons pu avancer sereinement vers notre objectif.`,
+        `J'ai été affectée sur la première moitié du projet a l'équipe front. Ayant des bases sur angular, j'ai tout de suite pû donner une direction a mon équipe. L'architecture est d'ailleurs en partie similaire à ce portfolio, avec un model et un service qui se chargent de récupérer la liste d'objet venant de l'API, service qui sera appelé dans un composant servant à créer une fiche produit, qui a son tours sera appelé dans d'autres composants. Nous avons utilisé un mock le temps que l'équipe back s'occupe de créer le code nécessaire pour appeler directement l'API.`
       ]),
 
     new ProjectCard(
@@ -58,8 +58,8 @@ export class ProjectsService {
         `L'objectif de ce projet était de travailler sur l'asynchrone, manipuler le DOM, et utiliser l'API chrome.`,
         `L'idée m'est venu car nous étions submerger par les information sur les viols de Mazan au moment du lancement du projet. Nous avons donc souhaité faire une extension qui puisse protéger des internautes sensibles à certains sujets.`,
         `Nous avons commencer en structurant le projet et avec un code existant, dont nous avons retro enginerer le fonctionnement. Une fois bien assimiler, nous nous sommes debarasser des feature dont nous n'avions pas besoin afin de garder les fonctions centrale à notre projet : la capacité de remplacer les mot d'une liste donnée sur la page active.`,
-        `Le principe se décompose en plusieurs élément. Le premier est de fournir la liste, qui pour le moment est coder en dur. Il fallait également que l'extension soit capable d'analyser tout le code HTML présent avec un craller. Grâce à ça, la troisième partie du programme allait remplacer dynamique les lettres des mots concordant avec sa "base de donnée" avec des astérisques.`,
-        `Pendant que mes collègues travaillaient sur la possibilité d'ajouter manuellement des mots, j'ai commencer à générer un JSON comportant différentes catégories et sous catégorie qui me servirait a ajouter des liste entière de mot et de leurs dérivés.`
+        `Le principe se décompose en plusieurs élément. Le premier est de fournir la liste, qui pour le moment est coder en dur. Il fallait également que l'extension soit capable d'analyser tout le code HTML présent avec un craller. Grâce à ça, la troisième partie du programme allait remplacer dynamiquement les lettres des mots concordant avec sa "base de données" avec des astérisques.`,
+        `Pendant que mes collègues travaillaient sur la possibilité d'ajouter manuellement des mots, j'ai commencer à générer un JSON comportant différentes catégories et sous catégorie qui me servirait a ajouter des liste entière de mot et de leurs dérivés. Grâce a l'affichage des données du JSON dans les options de l'extension, on peut sélectionner mot par mot, une sous-catégorie ou une catégorie qui sera enregistrée dans l'extension, et qui sera gardée en cache.`
       ]),
 
     new ProjectCard(
@@ -71,7 +71,10 @@ export class ProjectsService {
     ).withDevelopmentTime('Environ 7 jours')
       .withGitLink('https://github.com/olivia-brg/Dashboard')
       .withFullDescription([
-        ``
+        `Pour ce projet, nous devions nous familiariser avec les APIs et l'asynchrone. Nous avons donc choisi de faire un dashboard dont nous nous sommes repartis les composants. J'ai d'abord souhaité y intégrer un calendrier Google, mais face a la difficulté et au temps imparti, j'ai préféré mettre de côté cette idée et travailler sur des features plus simples.`,
+`Je suis donc partie sur une API regroupant des site de news, et j'en ai créé un affichage que l'on peut trier de différentes manières. J'ai choisis d'effectuer le tri sur la partie client pour "économiser" des appels a l'API.`,
+`En second j'ai voulu afficher un fond d'écran grâce a une API fournie par la NASA, qui fournit une photo par jour en thème avec l'astronomie. J'ai ajouté la posibilité de naviguer entre les différentes images dans un style "diaporama"`,
+`Au delà des features que j'ai implémentées, j'ai également aidé techniquement une collègue sur l'ajout de la carte des bicloos. J'y ai également ajouté une automatisation de l'appel afin d'avoir une carte à jour.`
       ]),
 
     new ProjectCard(
